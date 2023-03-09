@@ -1,0 +1,47 @@
+[
+  {
+    "name": "via-ferrata",
+    "base": "https://www.viaferrata-fr.net/",
+    "home": "via-ferrata.html",
+    "selectors": [".tr1 a", ".tr2 a"],
+    "properties": {
+      "name": {
+        "selector": "h1 a:last-of-type"
+      },
+      "starting_altitude": {
+        "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(1) + td",
+        "index": 0
+      },
+      "arrival_altitude": {
+        "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(1) + td",
+        "index": 1
+      },
+      "drop": {
+        "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(1) + td",
+        "index": 2
+      },
+      "difficulty": {
+        "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(3) + td",
+        "index": 0
+      },
+      "length": {
+        "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(3) + td",
+        "index": 1
+      },
+      "price": {
+        "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(3) + td",
+        "index": 2
+      },
+      "latitude": {
+        "selector": "#latitude"
+      },
+      "longitude": {
+        "selector": "#longitude"
+      },
+      "description": {
+        "selector": "div.topoTexte",
+        "strip": false
+      }
+    }
+  }
+]
