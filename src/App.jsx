@@ -8,9 +8,17 @@ const App = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("/data.json");
+      const response = await fetch("/via-ferrata.json");
       const json = await response.json();
-      setMarkers(json);
+      console.log(json.data);
+      const newMarkers = json.data.map(
+        ({ name, latitude, longitude, ...rest }) => ({
+          ...rest,
+          popup: name,
+          position: [latitude, longitude],
+        })
+      );
+      setMarkers(newMarkers);
     }
     fetchData();
   }, []);
