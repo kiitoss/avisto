@@ -4,6 +4,8 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 const Map = (props) => {
   const { zoom = 13, markers } = props;
 
+  console.log(markers);
+
   return (
     <MapContainer zoom={zoom} scrollWheelZoom={true} {...props}>
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
