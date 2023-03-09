@@ -4,7 +4,7 @@ import Map from "./components/Map";
 const App = () => {
   const [markers, setMarkers] = useState(null);
 
-  const position = [45.764043, 4.835659];
+  const center = [45.764043, 4.835659];
 
   useEffect(() => {
     async function fetchData() {
@@ -16,11 +16,9 @@ const App = () => {
   }, []);
 
   return (
-    <Map
-      style={{ minHeight: "100vh", minWidth: "100vw" }}
-      position={position}
-      markers={markers}
-    ></Map>
+    <div className="min-h-screen">
+      <Map center={center} markers={markers} className="min-h-screen"></Map>
+    </div>
   );
 };
 
