@@ -1,38 +1,41 @@
 import React from "react";
+import { HiX } from "react-icons/hi";
 
-const Sidebar = ({ isOpen, dataSources, setDataSources }) => {
-  const handleCheckboxChange = (index) => {
-    const newDataSources = [...dataSources];
-    newDataSources[index].enabled = !newDataSources[index].enabled;
-    setDataSources(newDataSources);
-  };
-
+const Sidebar = ({ isOpen, setIsOpen, marker }) => {
   return (
     <div
-      className={`absolute top-0 left-0 h-full w-64 bg-gray-800 text-white transition-all duration-300 transform ${
-        isOpen ? "" : "-translate-x-full"
+      className={`opacity-90 absolute w-96 h-screen top-0 right-0 overflow-hidden ${
+        isOpen ? "" : "pointer-events-none"
       }`}
     >
-      <div className="flex items-center justify-center h-16 text-xl font-bold">
-        Filtres
-      </div>
-      <ul className="py-4">
-        {dataSources.map((dataSource, index) => (
-          <li
-            key={index}
-            className="pl-6 py-2 hover:bg-gray-700 flex items-center cursor-pointer"
-            onClick={() => handleCheckboxChange(index)}
+      <div
+        className={`absolute top-0 right-0 h-full w-full bg-gray-800 text-white transition-all duration-300 transform overflow-y-auto ${
+          isOpen ? "" : "translate-x-full"
+        }`}
+      >
+        <div className="flex items-center justify-between h-16 text-xl font-bold px-4">
+          <h2 className="mx-auto">Infos</h2>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-white hover:text-gray-300 focus:outline-none"
           >
-            <input
-              type="checkbox"
-              checked={dataSource.enabled}
-              onChange={() => handleCheckboxChange(index)}
-              className="mr-2"
-            />
-            {dataSource.name}
-          </li>
-        ))}
-      </ul>
+            <HiX />
+          </button>
+        </div>
+
+        {marker && (
+          <div className="p-5">
+            <h2>{marker.name}</h2>
+            <ul>
+              {Object.keys(marker).map((property) => (
+                <li className="py-2" key={property}>
+                  {property}: {marker[property]}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

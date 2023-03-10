@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const SearchInput = ({ onFocus, onBlur, onChange }) => {
   return (
@@ -13,23 +13,21 @@ const SearchInput = ({ onFocus, onBlur, onChange }) => {
   );
 };
 
-const SearchResultList = ({ markers, onMarkerClick }) => {
-  const handleClick = (id) => {
-    onMarkerClick(id);
-  };
-
+const SearchResultList = ({ className, markers, onMarkerClick }) => {
   return (
-    <ul className="max-w-lg mx-auto max-h-52 overflow-auto bg-white rounded-b-lg">
-      {markers.map((marker) => (
+    <ul
+      className={`${className} max-w-lg mx-auto max-h-52 overflow-auto bg-white rounded-b-lg`}
+    >
+      {markers?.map((marker) => (
         <li
           key={marker.id}
           className="px-4 py-2 text-gray-700 cursor-pointer hover:bg-gray-100"
-          onClick={() => handleClick(marker.id)}
+          onClick={() => onMarkerClick(marker)}
         >
           {marker.name}
         </li>
       ))}
-      {markers.length === 0 && (
+      {markers?.length === 0 && (
         <p className="text-center text-gray-500 mt-8">
           No markers match your search.
         </p>
@@ -43,16 +41,16 @@ const Searchbar = ({ markers, onMarkerClick }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleFocus = () => setIsFocused(true);
-  const handleBlur = () => setIsFocused(false);
+  const handleBlur = () => {
+    setTimeout(() => {
+      setIsFocused(false);
+    }, 100);
+  };
   const handleSearchChange = (event) => setSearchTerm(event.target.value);
 
   const filteredMarkers = markers?.filter((marker) =>
     marker.name?.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  const handleMarkerClick = (id) => {
-    onMarkerClick(id);
-  };
 
   return (
     <div>
@@ -69,12 +67,14 @@ const Searchbar = ({ markers, onMarkerClick }) => {
           onChange={handleSearchChange}
         />
       </div>
-      {isFocused && (
-        <SearchResultList
-          markers={filteredMarkers || markers}
-          onMarkerClick={handleMarkerClick}
-        />
-      )}
+
+      <SearchResultList
+        className={`${
+          isFocused ? "opacity-100 max-h-52" : "opacity-0 max-h-0"
+        } transition-all duration-200`}
+        markers={filteredMarkers || markers}
+        onMarkerClick={onMarkerClick}
+      />
     </div>
   );
 };

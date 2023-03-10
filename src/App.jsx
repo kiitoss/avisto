@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Map from "./components/Map";
-import Sidebar from "./components/Sidebar";
+import Filters from "./components/Filters";
 import Searchbar from "./components/Searchbar";
+import Sidebar from "./components/Sidebar";
+
 import { HiAdjustments } from "react-icons/hi";
 
 const App = () => {
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [currentMarker, setCurrentMarker] = useState(null);
+
   const [markers, setMarkers] = useState(null);
   const [dataSources, setDataSources] = useState([
     { name: "via-ferrata", enabled: true, file: "/via-ferrata.json" },
@@ -13,8 +18,13 @@ const App = () => {
 
   const center = [45.764043, 4.835659];
 
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
+  const toggleFilters = () => {
+    setFiltersOpen(!filtersOpen);
+  };
+
+  const handleMarkerClick = (marker) => {
+    setSidebarOpen(true);
+    setCurrentMarker(marker);
   };
 
   useEffect(() => {
@@ -40,25 +50,37 @@ const App = () => {
 
   return (
     <main>
-      <Searchbar markers={markers} />
+      <Searchbar markers={markers} onMarkerClick={handleMarkerClick} />
 
       <button
-        className={`fixed bottom-0 right-0 m-4 py-2 px-4 rounded-full flex hover:bg-blue-500 hover:text-white transition-all duration-200 ${
-          sidebarOpen ? "bg-blue-500 text-white" : "bg-white text-gray-700"
+        className={`fixed bottom-0 left-1/2 transform -translate-x-1/2 m-4 py-2 px-4 rounded-full flex hover:bg-blue-500 hover:text-white transition-all duration-200 ${
+          filtersOpen ? "bg-blue-500 text-white" : "bg-white text-gray-700"
         }`}
-        onClick={toggleSidebar}
+        onClick={toggleFilters}
       >
         <HiAdjustments className="h-6 w-6 text-white-500 mr-2" /> Filters
       </button>
 
-      <Sidebar
-        isOpen={sidebarOpen}
+      <Filters
+        isOpen={filtersOpen}
+        setIsOpen={setFiltersOpen}
         dataSources={dataSources}
         setDataSources={setDataSources}
       />
 
+      <Sidebar
+        isOpen={sidebarOpen}
+        setIsOpen={setSidebarOpen}
+        marker={currentMarker}
+      />
+
       <section className="-z-10 absolute top-0 left-0 w-full h-full">
-        <Map center={center} markers={markers} className="h-full" />
+        <Map
+          center={center}
+          onMarkerClick={handleMarkerClick}
+          markers={markers}
+          className="h-full"
+        />
       </section>
     </main>
   );
