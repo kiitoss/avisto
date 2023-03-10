@@ -2,9 +2,7 @@ import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 const Map = (props) => {
-  const { zoom = 13, markers } = props;
-
-  console.log(markers);
+  const { zoom = 7, markers } = props;
 
   return (
     <MapContainer zoom={zoom} scrollWheelZoom={true} {...props}>
