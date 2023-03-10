@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Sidebar = ({ className, isOpen, dataSources, setDataSources }) => {
+const Sidebar = ({ isOpen, dataSources, setDataSources }) => {
   const handleCheckboxChange = (index) => {
     const newDataSources = [...dataSources];
     newDataSources[index].enabled = !newDataSources[index].enabled;
@@ -9,7 +9,7 @@ const Sidebar = ({ className, isOpen, dataSources, setDataSources }) => {
 
   return (
     <div
-      className={`${className} absolute top-0 left-0 h-full w-64 bg-gray-800 text-white transition-all duration-300 transform ${
+      className={`absolute top-0 left-0 h-full w-64 bg-gray-800 text-white transition-all duration-300 transform ${
         isOpen ? "" : "-translate-x-full"
       }`}
     >

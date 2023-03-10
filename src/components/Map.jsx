@@ -5,11 +5,17 @@ const Map = (props) => {
   const { zoom = 7, markers } = props;
 
   return (
-    <MapContainer zoom={zoom} scrollWheelZoom={true} {...props}>
+    <MapContainer
+      zoom={zoom}
+      scrollWheelZoom={true}
+      zoomControl={false}
+      attributionControl={false}
+      {...props}
+    >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      {markers?.map((marker, key) => (
-        <Marker key={key} position={marker.position}>
-          <Popup>{marker.popup}</Popup>
+      {markers?.map((marker) => (
+        <Marker key={marker.id} position={marker.position}>
+          <Popup>{marker.name}</Popup>
         </Marker>
       ))}
     </MapContainer>
