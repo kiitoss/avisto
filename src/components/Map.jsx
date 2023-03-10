@@ -2,16 +2,29 @@ import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 const Map = (props) => {
-  const { zoom = 13, markers } = props;
-
-  console.log(markers);
+  const { zoom = 7, markers, onMarkerClick } = props;
 
   return (
-    <MapContainer zoom={zoom} scrollWheelZoom={true} {...props}>
+    <MapContainer
+      zoom={zoom}
+      scrollWheelZoom={true}
+      zoomControl={false}
+      attributionControl={false}
+      {...props}
+    >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      {markers?.map((marker, key) => (
-        <Marker key={key} position={marker.position}>
-          <Popup>{marker.popup}</Popup>
+      {markers?.map((marker) => (
+        <Marker
+          key={marker.id}
+          position={marker.position}
+          data={marker}
+          eventHandlers={{
+            click: (e) => {
+              onMarkerClick(e.target.options.data);
+            },
+          }}
+        >
+          <Popup>{marker.name}</Popup>
         </Marker>
       ))}
     </MapContainer>
