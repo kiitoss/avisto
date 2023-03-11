@@ -12,8 +12,14 @@ const App = () => {
   const [currentMarker, setCurrentMarker] = useState(null);
 
   const [markers, setMarkers] = useState(null);
+
   const [dataSources, setDataSources] = useState([
-    { name: "via-ferrata", enabled: true, file: "./via-ferrata.json" },
+    {
+      name: "via-ferrata",
+      enabled: true,
+      file: "./via-ferrata.json",
+      markerColor: "green",
+    },
   ]);
 
   const center = [45.764043, 4.835659];
@@ -37,6 +43,7 @@ const App = () => {
           const json = await response.json();
           const markers = json.data.map(({ latitude, longitude, ...rest }) => ({
             ...rest,
+            color: dataSource.markerColor,
             id: id++,
             position: [latitude, longitude],
           }));

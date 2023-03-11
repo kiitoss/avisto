@@ -2,7 +2,6 @@ import React from "react";
 
 const Text = (props) => {
   const { text } = props;
-  console.log(text);
   const paragraphs = text
     .replace(/\n+$/, "")
     .split("\n")

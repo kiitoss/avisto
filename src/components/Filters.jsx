@@ -1,4 +1,5 @@
 import React from "react";
+import markerColors from "../marker-colors";
 import { HiX } from "react-icons/hi";
 
 const Filters = ({ isOpen, setIsOpen, dataSources, setDataSources }) => {
@@ -25,16 +26,24 @@ const Filters = ({ isOpen, setIsOpen, dataSources, setDataSources }) => {
       </div>
       <ul className="py-4">
         {dataSources.map((dataSource, index) => (
-          <li key={index}>
-            <label className="pl-6 py-2 hover:bg-gray-700 flex items-center cursor-pointer">
+          <li key={index} className="flex">
+            <label className="grow hover:bg-gray-700 flex items-center cursor-pointer">
+              <span
+                style={{
+                  backgroundColor: markerColors[dataSource.markerColor]
+                    ? markerColors[dataSource.markerColor]
+                    : markerColors[Object.keys(markerColors)[0]],
+                }}
+                className="mr-4 h-full w-2"
+              ></span>
               <input
                 type="checkbox"
                 checked={dataSource.enabled}
                 name={`checkbox-${index}`}
-                className="mr-2"
+                className="mr-2 pl-4"
                 onChange={(e) => handleCheckboxChange(e, index)}
               />
-              {dataSource.name}
+              <span className="py-2">{dataSource.name}</span>
             </label>
           </li>
         ))}
