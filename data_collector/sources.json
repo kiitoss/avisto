@@ -18,27 +18,59 @@
         "starting_altitude": {
           "label": "altitude de départ",
           "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(1) + td",
-          "index": 0
+          "index": 0,
+          "filter": {
+            "type": "number"
+          }
         },
         "arrival_altitude": {
           "label": "altitude d'arrivée",
           "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(1) + td",
-          "index": 1
+          "index": 1,
+          "filter": {
+            "type": "number"
+          }
         },
         "drop": {
           "label": "dénivelé",
           "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(1) + td",
-          "index": 2
+          "index": 2,
+          "filter": {
+            "type": "number"
+          }
         },
         "difficulty": {
           "label": "difficulté",
           "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(3) + td",
-          "index": 0
+          "index": 0,
+          "filter": {
+            "type": "select",
+            "options": [
+              "F-",
+              "F",
+              "F+",
+              "AD-",
+              "AD",
+              "AD+",
+              "D-",
+              "D",
+              "D+",
+              "TD-",
+              "TD",
+              "TD+",
+              "ED-",
+              "ED",
+              "ED+"
+            ]
+          }
         },
         "length": {
           "label": "longueur",
           "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(3) + td",
-          "index": 1
+          "index": 1,
+          "filter": {
+            "type": "number"
+          }
         },
         "price": {
           "label": "prix",
