@@ -14,7 +14,7 @@ const Sidebar = ({ isOpen, setIsOpen, marker }) => {
       }`}
     >
       <div
-        className={`absolute top-0 right-0 h-screen w-screen bg-gray-800 text-white transition-all duration-300 transform overflow-y-auto ${
+        className={`absolute top-0 right-0 h-screen w-full bg-gray-800 text-white transition-all duration-300 transform overflow-y-auto ${
           isOpen ? "" : "translate-x-full"
         }`}
       >
