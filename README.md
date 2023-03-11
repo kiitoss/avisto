@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/icon.svg" alt="avisto" style="max-height: 250px;"></p>
+<p align="center"><img src="assets/icon.svg" alt="avisto" style="width="200px"></p>
 
 # αvisto
 
