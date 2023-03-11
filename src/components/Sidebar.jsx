@@ -34,13 +34,11 @@ const Sidebar = ({ isOpen, setIsOpen, marker }) => {
               {marker.name}
             </h3>
             <ul>
-              {marker.infos.map((info, key) => {
+              {Object.entries(marker.infos).map(([key, { label, text }]) => {
                 return (
                   <li className="py-1" key={key}>
-                    <h4 className="text-lg font-bold">
-                      {capitalize(info.label)} :
-                    </h4>
-                    <Text text={info.text} />
+                    <h4 className="text-lg font-bold">{capitalize(label)} :</h4>
+                    <Text text={text} />
                   </li>
                 );
               })}

@@ -23,6 +23,7 @@ const App = () => {
       markerColor: "green",
     },
   ]);
+  const [dataFilters, setDataFilters] = useState([]);
 
   const center = [45.764043, 4.835659];
 
@@ -43,6 +44,12 @@ const App = () => {
         if (dataSource.enabled) {
           const response = await fetch(dataSource.file);
           const json = await response.json();
+
+          setDataFilters((prevDataFilters) => ({
+            ...prevDataFilters,
+            [dataSource.name]: json.filters,
+          }));
+
           const markers = json.data.map(({ latitude, longitude, ...rest }) => ({
             ...rest,
             color: dataSource.markerColor,
@@ -75,6 +82,7 @@ const App = () => {
         setIsOpen={setFiltersOpen}
         dataSources={dataSources}
         setDataSources={setDataSources}
+        dataFilters={dataFilters}
       />
 
       <Sidebar
