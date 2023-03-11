@@ -13,7 +13,7 @@ const App = () => {
 
   const [markers, setMarkers] = useState(null);
   const [dataSources, setDataSources] = useState([
-    { name: "via-ferrata", enabled: true, file: "/via-ferrata.json" },
+    { name: "via-ferrata", enabled: true, file: "./via-ferrata.json" },
   ]);
 
   const center = [45.764043, 4.835659];

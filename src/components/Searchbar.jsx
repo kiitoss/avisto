@@ -16,7 +16,7 @@ const SearchInput = ({ onFocus, onBlur, onChange }) => {
 const SearchResultList = ({ className, markers, onMarkerClick }) => {
   return (
     <ul
-      className={`${className} max-w-lg mx-auto max-h-52 overflow-auto bg-white rounded-b-lg`}
+      className={`${className} mx-auto overflow-auto bg-white rounded-b-lg max-w-lg`}
     >
       {markers?.map((marker) => (
         <li
@@ -53,12 +53,12 @@ const Searchbar = ({ markers, onMarkerClick }) => {
   );
 
   return (
-    <div>
+    <div className="absolute left-1/2 transform -translate-x-1/2">
       <div
-        className={`rounded-full py-2 px-4 m-auto mt-2 bg-white  hover:opacity-100 hover:max-w-lg ${
+        className={`w-screen rounded-full py-2 px-4 m-auto mt-2 bg-white  hover:opacity-100 hover:max-w-lg ${
           isFocused
             ? "opacity-100 max-w-lg rounded-none rounded-t-lg transition-none"
-            : "max-w-sm opacity-80"
+            : "opacity-80 max-w-sm"
         } transition-all duration-200`}
       >
         <SearchInput
@@ -70,8 +70,10 @@ const Searchbar = ({ markers, onMarkerClick }) => {
 
       <SearchResultList
         className={`${
-          isFocused ? "opacity-100 max-h-52" : "opacity-0 max-h-0"
-        } transition-all duration-200`}
+          isFocused
+            ? "opacity-100 max-h-52 max-w-lg"
+            : "opacity-0 max-h-0 max-w-sm"
+        } transition-[max-height] duration-200`}
         markers={filteredMarkers || markers}
         onMarkerClick={onMarkerClick}
       />
