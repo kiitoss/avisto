@@ -8,39 +8,48 @@
       "name": {
         "selector": "h1 a:last-of-type"
       },
-      "starting_altitude": {
-        "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(1) + td",
-        "index": 0
-      },
-      "arrival_altitude": {
-        "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(1) + td",
-        "index": 1
-      },
-      "drop": {
-        "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(1) + td",
-        "index": 2
-      },
-      "difficulty": {
-        "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(3) + td",
-        "index": 0
-      },
-      "length": {
-        "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(3) + td",
-        "index": 1
-      },
-      "price": {
-        "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(3) + td",
-        "index": 2
-      },
       "latitude": {
         "selector": "#latitude"
       },
       "longitude": {
         "selector": "#longitude"
       },
-      "description": {
-        "selector": "div.topoTexte",
-        "strip": false
+      "infos": {
+        "starting_altitude": {
+          "label": "altitude de départ",
+          "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(1) + td",
+          "index": 0
+        },
+        "arrival_altitude": {
+          "label": "altitude d'arrivée",
+          "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(1) + td",
+          "index": 1
+        },
+        "drop": {
+          "label": "dénivelé",
+          "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(1) + td",
+          "index": 2
+        },
+        "difficulty": {
+          "label": "difficulté",
+          "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(3) + td",
+          "index": 0
+        },
+        "length": {
+          "label": "longueur",
+          "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(3) + td",
+          "index": 1
+        },
+        "price": {
+          "label": "prix",
+          "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(3) + td",
+          "index": 2
+        },
+        "description": {
+          "label": "description",
+          "selector": "div.topoTexte",
+          "strip": false
+        }
       }
     }
   }
