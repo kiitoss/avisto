@@ -10,11 +10,11 @@ const Filters = ({ isOpen, setIsOpen, dataSources, setDataSources }) => {
 
   return (
     <div
-      className={`opacity-90 absolute top-0 left-0 h-full w-64 bg-gray-800 text-white transition-all duration-300 transform ${
+      className={`opacity-90 absolute top-0 left-0 h-full w-64 max-w-full bg-gray-800 text-white transition-all duration-300 transform ${
         isOpen ? "" : "-translate-x-full"
       }`}
     >
-      <div className="flex items-center justify-between h-16 text-xl font-bold px-4">
+      <div className="flex items-center justify-between pt-4 text-xl font-bold px-4">
         <h2 className="mx-auto">Filters</h2>
         <button
           onClick={() => setIsOpen(false)}

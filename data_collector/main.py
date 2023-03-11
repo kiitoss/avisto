@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import ftfy
 from datetime import datetime
 
+
 def get_soup(url):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0"
@@ -26,28 +27,40 @@ def get_urls(soup, selectors, base_url):
     return urls
 
 
-def get_infos(url, properties):
+def get_text(soup, item):
+    selector = item.get("selector")
+    if not selector:
+        return None
+
+    strip = item.get("strip", True)
+    index = item.get("index", 0)
+    data = soup.select(selector)
+    if not data:
+        return None
+
+    text = data[index].get_text(strip=strip)
+    return ftfy.fix_text(unicodedata.normalize("NFKC", text))
+
+
+def get_data(url, properties):
     soup = get_soup(url)
-    infos = {}
-    for key, item in properties.items():
-        selector = item.get("selector")
-        strip = item.get("strip", True)
-        index = item.get("index", 0)
-        if not selector:
-            continue
-        data = soup.select(selector)
-        if data:
-            content = data[index].get_text(strip=strip)
-            infos[key] = ftfy.fix_text(unicodedata.normalize("NFKC", content))
-    return infos
+
+    name_prop, latitude_prop, longitude_prop, infos_prop = properties.values()
+
+    data = {
+        'name': get_text(soup, name_prop),
+        'latitude': get_text(soup, latitude_prop),
+        'longitude': get_text(soup, longitude_prop),
+        'infos': [{'label': item.get('label'), 'text': get_text(soup, item)}
+                  for key, item in infos_prop.items()]
+    }
+
+    return data
 
 
 def save_json(name, data):
     filename = f"{name}.json"
-    output = {
-        "date": datetime.today().strftime('%Y-%m-%d %H:%M:%S'),
-        "data": data
-    }
+    output = {"date": datetime.today().strftime("%Y-%m-%d %H:%M:%S"), "data": data}
 
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=4, ensure_ascii=False)
@@ -60,11 +73,12 @@ def collect_data(sources):
 
         soup = get_soup(base_url + home_url)
         urls = get_urls(soup, selectors, base_url)
-
+        
         infos = []
+
         for i, url in enumerate(urls):
             print(f"({i+1}/{len(urls)})\t- Collecting data from {url}")
-            infos.append(get_infos(url, properties))
+            infos.append(get_data(url, properties))
 
         print()
 
