@@ -31,15 +31,17 @@ const Map = (props) => {
       {...props}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      {markers?.map((marker) => (
+      {markers?.map((marker, index) => (
         <Marker
-          key={marker.id}
+          key={index}
           position={marker.position}
           data={marker}
           eventHandlers={{
             click: (e) => {
               onMarkerClick(e.target.options.data);
             },
+            mouseover: (e) => e.target.openPopup(),
+            mouseout: (e) => e.target.closePopup(),
           }}
           markerColor="orange"
           icon={getColoredMarkerIcon(marker.color)}
