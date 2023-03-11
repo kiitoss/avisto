@@ -1,10 +1,15 @@
 import React from "react";
+import Text from "./Text";
 import { HiX } from "react-icons/hi";
 
 const Sidebar = ({ isOpen, setIsOpen, marker }) => {
+  const capitalize = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
   return (
     <div
-      className={`opacity-90 absolute w-96 h-screen top-0 right-0 overflow-hidden ${
+      className={`opacity-90 absolute w-96 max-w-full h-screen top-0 right-0 overflow-hidden ${
         isOpen ? "" : "pointer-events-none"
       }`}
     >
@@ -13,7 +18,7 @@ const Sidebar = ({ isOpen, setIsOpen, marker }) => {
           isOpen ? "" : "translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between h-16 text-xl font-bold px-4">
+        <div className="flex items-center justify-between pt-4 text-xl font-bold px-4">
           <h2 className="mx-auto">Infos</h2>
           <button
             onClick={() => setIsOpen(false)}
@@ -25,13 +30,20 @@ const Sidebar = ({ isOpen, setIsOpen, marker }) => {
 
         {marker && (
           <div className="p-5">
-            <h2>{marker.name}</h2>
+            <h3 className="text-xl text-center font-bold pb-4">
+              {marker.name}
+            </h3>
             <ul>
-              {Object.keys(marker).map((property) => (
-                <li className="py-2" key={property}>
-                  {property}: {marker[property]}
-                </li>
-              ))}
+              {marker.infos.map((info, key) => {
+                return (
+                  <li className="py-1" key={key}>
+                    <h4 className="text-lg font-bold">
+                      {capitalize(info.label)} :
+                    </h4>
+                    <Text text={info.text} />
+                  </li>
+                );
+              })}
             </ul>
           </div>
         )}

@@ -29,7 +29,6 @@ const Map = (props) => {
             new Icon({
               iconUrl: markerIconPng,
               iconSize: [25, 41],
-              iconAnchor: [12, 41],
             })
           }
         >
