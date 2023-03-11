@@ -20,7 +20,19 @@ const getColoredMarkerIcon = (color) => {
 };
 
 const Map = (props) => {
-  const { zoom = 7, markers, onMarkerClick } = props;
+  const { zoom = 7, markers, onMarkerClick, currentMarkerId } = props;
+
+  const initMarker = (ref) => {
+    if (!ref) {
+      return;
+    }
+
+    if (ref.options.data.id === currentMarkerId) {
+      ref.openPopup();
+    } else {
+      ref.closePopup();
+    }
+  };
 
   return (
     <MapContainer
@@ -31,9 +43,10 @@ const Map = (props) => {
       {...props}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      {markers?.map((marker, index) => (
+      {markers?.map((marker) => (
         <Marker
-          key={index}
+          ref={initMarker}
+          key={marker.id}
           position={marker.position}
           data={marker}
           eventHandlers={{
@@ -41,12 +54,19 @@ const Map = (props) => {
               onMarkerClick(e.target.options.data);
             },
             mouseover: (e) => e.target.openPopup(),
-            mouseout: (e) => e.target.closePopup(),
+            mouseout: (e) => {
+              if (e.target.options.data?.id !== currentMarkerId) {
+                e.target.closePopup();
+              }
+            },
           }}
-          markerColor="orange"
-          icon={getColoredMarkerIcon(marker.color)}
+          icon={
+            marker.id === currentMarkerId
+              ? getColoredMarkerIcon("red")
+              : getColoredMarkerIcon(marker.color)
+          }
         >
-          <Popup>{marker.name}</Popup>
+          <Popup autoClose={false}>{marker.name}</Popup>
         </Marker>
       ))}
     </MapContainer>

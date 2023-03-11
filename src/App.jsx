@@ -13,6 +13,8 @@ const App = () => {
 
   const [markers, setMarkers] = useState(null);
 
+  // do not use the red color for markers
+  // because it is already used for the clicked marker
   const [dataSources, setDataSources] = useState([
     {
       name: "via-ferrata",
@@ -87,6 +89,7 @@ const App = () => {
           onMarkerClick={handleMarkerClick}
           markers={markers}
           className="h-screen"
+          currentMarkerId={currentMarker ? currentMarker.id : null}
         />
       </section>
     </main>
