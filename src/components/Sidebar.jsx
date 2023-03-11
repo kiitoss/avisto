@@ -9,12 +9,12 @@ const Sidebar = ({ isOpen, setIsOpen, marker }) => {
 
   return (
     <div
-      className={`opacity-90 absolute w-96 max-w-full h-screen top-0 right-0 overflow-hidden ${
+      className={`opacity-90 absolute w-96 max-w-screen h-screen top-0 right-0 overflow-hidden ${
         isOpen ? "" : "pointer-events-none"
       }`}
     >
       <div
-        className={`absolute top-0 right-0 h-full w-full bg-gray-800 text-white transition-all duration-300 transform overflow-y-auto ${
+        className={`absolute top-0 right-0 h-screen w-screen bg-gray-800 text-white transition-all duration-300 transform overflow-y-auto ${
           isOpen ? "" : "translate-x-full"
         }`}
       >

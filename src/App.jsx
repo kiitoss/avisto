@@ -74,12 +74,12 @@ const App = () => {
         marker={currentMarker}
       />
 
-      <section className="-z-10 absolute top-0 left-0 w-full h-full">
+      <section className="-z-10 absolute top-0 left-0 w-screen h-screen">
         <Map
           center={center}
           onMarkerClick={handleMarkerClick}
           markers={markers}
-          className="h-full"
+          className="h-screen"
         />
       </section>
     </main>

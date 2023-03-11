@@ -10,7 +10,7 @@ const Filters = ({ isOpen, setIsOpen, dataSources, setDataSources }) => {
 
   return (
     <div
-      className={`opacity-90 absolute top-0 left-0 h-full w-64 max-w-full bg-gray-800 text-white transition-all duration-300 transform ${
+      className={`opacity-90 absolute top-0 left-0 h-screen w-64 max-w-screen bg-gray-800 text-white transition-all duration-300 transform ${
         isOpen ? "" : "-translate-x-full"
       }`}
     >
