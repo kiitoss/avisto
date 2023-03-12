@@ -23,6 +23,7 @@ const App = () => {
       markerColor: "green",
     },
   ]);
+
   const [dataFilters, setDataFilters] = useState([]);
 
   const center = [45.764043, 4.835659];
@@ -39,28 +40,62 @@ const App = () => {
   useEffect(() => {
     const fetchMarkers = async () => {
       const newMarkers = [];
-      let id = 0;
+      let markerId = 0;
+
       for (const dataSource of dataSources) {
-        if (dataSource.enabled) {
-          const response = await fetch(dataSource.file);
-          const json = await response.json();
-
-          setDataFilters((prevDataFilters) => ({
-            ...prevDataFilters,
-            [dataSource.name]: json.filters,
-          }));
-
-          const markers = json.data.map(({ latitude, longitude, ...rest }) => ({
-            ...rest,
-            color: dataSource.markerColor,
-            id: id++,
-            position: [latitude, longitude],
-          }));
-          newMarkers.push(...markers);
+        if (!dataSource.enabled) {
+          continue;
         }
+
+        const response = await fetch(dataSource.file);
+        const { data, filters: rawFilters } = await response.json();
+
+        const filters = Object.fromEntries(
+          Object.entries(rawFilters).filter(([_, value]) => value !== null)
+        );
+
+        const markers = data.map(({ latitude, longitude, infos, ...rest }) => {
+          const markerFilters = {};
+
+          for (const [key, infoFilter] of Object.entries(filters)) {
+            const info = infos[key];
+
+            if (infoFilter.type === "number") {
+              const numbers = info.text.match(/\d+/g)?.map(Number) || [];
+
+              markerFilters[key] = numbers.length === 1 ? numbers[0] : numbers;
+
+              if (!infoFilter.min || markerFilters[key] < infoFilter.min) {
+                infoFilter.min = markerFilters[key];
+              }
+
+              if (!infoFilter.max || markerFilters[key] > infoFilter.max) {
+                infoFilter.max = markerFilters[key];
+              }
+            }
+          }
+
+          return {
+            id: markerId++,
+            position: [latitude, longitude],
+            color: dataSource.markerColor,
+            filters: markerFilters,
+            infos,
+            ...rest,
+          };
+        });
+
+        setDataFilters((prevDataFilters) => ({
+          ...prevDataFilters,
+          [dataSource.name]: filters,
+        }));
+
+        newMarkers.push(...markers);
       }
+
       setMarkers(newMarkers);
     };
+
     fetchMarkers();
   }, [dataSources]);
 
