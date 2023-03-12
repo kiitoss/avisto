@@ -10,6 +10,10 @@ const RangeSlider = (props) => {
   const { min, max } = props;
   const [value, setValue] = useState([min, max]);
 
+  console.log(value);
+  console.log(min);
+  console.log(max);
+
   const handleChange = (event, newValue) => {
     console.log(min);
     console.log(max);
@@ -18,14 +22,20 @@ const RangeSlider = (props) => {
   };
 
   return (
-    <Box>
-      <Slider
-        getAriaLabel={() => "Temperature range"}
-        value={value}
-        onChange={handleChange}
-        valueLabelDisplay="auto"
-        getAriaValueText={valuetext}
-      />
+    <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box sx={{ width: "20%", textAlign: "center" }}>{min}</Box>
+      <Box sx={{ width: "60%", mx: 2 }}>
+        <Slider
+          getAriaLabel={() => "Temperature range"}
+          value={value}
+          onChange={handleChange}
+          valueLabelDisplay="auto"
+          getAriaValueText={valuetext}
+          min={min}
+          max={max}
+        />
+      </Box>
+      <Box sx={{ width: "20%", textAlign: "center" }}>{max}</Box>
     </Box>
   );
 };

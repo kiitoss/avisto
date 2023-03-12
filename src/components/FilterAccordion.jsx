@@ -1,5 +1,6 @@
 import React from "react";
 import RangeSlider from "./RangeSlider";
+import { capitalize } from "../utils";
 
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -9,6 +10,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const FilterAccordion = (props) => {
   const { index, backgroundColor, handleCheckboxChange, dataSource, filters } =
     props;
+
   return (
     <div>
       <Accordion
@@ -46,19 +48,21 @@ const FilterAccordion = (props) => {
                 type="checkbox"
                 checked={dataSource.enabled}
                 name={`checkbox-${index}`}
-                className="mr-2 pl-4"
+                className="mr-4 pl-4"
                 onChange={(e) => handleCheckboxChange(e, index)}
               />
-              <span className="py-2">{dataSource.name}</span>
+              <span className="py-2 text-lg">{dataSource.name}</span>
             </label>
           </div>
         </AccordionSummary>
         <AccordionDetails>
           {filters && (
-            <ul className="m-4 mt-2 text-gray-400 text-sm">
+            <ul className="mt-2 text-sm">
               {Object.entries(filters).map(([key, infoFilter]) => (
-                <li key={key}>
-                  {key} : {infoFilter?.toString()}
+                <li key={key} className="pb-4">
+                  <h4 className="font-bold pb-1">
+                    {capitalize(infoFilter.label)} :
+                  </h4>
                   {infoFilter.type === "number" && (
                     <RangeSlider min={infoFilter.min} max={infoFilter.max} />
                   )}

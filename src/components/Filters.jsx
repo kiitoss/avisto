@@ -1,7 +1,6 @@
 import React from "react";
 import markerColors from "../marker-colors";
 import { HiX } from "react-icons/hi";
-import RangeSlider from "./RangeSlider";
 import FilterAccordion from "./FilterAccordion";
 
 const Filters = (props) => {
@@ -15,7 +14,7 @@ const Filters = (props) => {
 
   return (
     <div
-      className={`opacity-90 absolute top-0 left-0 h-screen overflow-auto w-64 max-w-screen bg-gray-800 text-white transition-all duration-300 transform ${
+      className={`opacity-90 absolute top-0 left-0 h-screen overflow-auto w-72 max-w-screen bg-gray-800 text-white transition-all duration-300 transform ${
         isOpen ? "" : "-translate-x-full"
       }`}
     >

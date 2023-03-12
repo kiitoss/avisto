@@ -1,76 +1,79 @@
 {
-  "date": "2023-03-11 18:31:19",
-  "filters": {
-    "starting_altitude": {
-      "type": "number"
-    },
-    "arrival_altitude": {
-      "type": "number"
-    },
-    "drop": {
-      "type": "number"
-    },
-    "difficulty": {
-      "type": "select",
-      "options": [
-        "F-",
-        "F",
-        "F+",
-        "AD-",
-        "AD",
-        "AD+",
-        "D-",
-        "D",
-        "D+",
-        "TD-",
-        "TD",
-        "TD+",
-        "ED-",
-        "ED",
-        "ED+"
-      ]
-    },
-    "length": {
-      "type": "number"
-    },
-    "price": null,
-    "description": null
-  },
-  "data": [
-    {
-      "name": "Hostiaz » La Guinguette",
-      "latitude": "45.916056",
-      "longitude": "5.5186672",
-      "infos": {
+    "date": "2023-03-12 17:38:10",
+    "filters": {
         "starting_altitude": {
-          "label": "altitude de départ",
-          "text": "760 mètres"
+            "label": "altitude de départ",
+            "type": "number"
         },
         "arrival_altitude": {
-          "label": "altitude d'arrivée",
-          "text": "745 mètres"
+            "label": "altitude d'arrivée",
+            "type": "number"
         },
         "drop": {
-          "label": "dénivelé",
-          "text": "15 mètres"
+            "label": "dénivelé",
+            "type": "number"
         },
         "difficulty": {
-          "label": "difficulté",
-          "text": "D"
+            "label": "difficulté",
+            "type": "select",
+            "options": [
+                "F-",
+                "F",
+                "F+",
+                "AD-",
+                "AD",
+                "AD+",
+                "D-",
+                "D",
+                "D+",
+                "TD-",
+                "TD",
+                "TD+",
+                "ED-",
+                "ED",
+                "ED+"
+            ]
         },
         "length": {
-          "label": "longueur",
-          "text": "650 mètres"
-        },
-        "price": {
-          "label": "prix",
-          "text": "Gratuit"
-        },
-        "description": {
-          "label": "description",
-          "text": "Description 1:\nLa viaferrata débute sur un sentier glissant, pour atteindre une vire dans la falaise.\nLà, les choses deviennent intérressante avec une belle vue sur le village de Tenay et toute la vallée de l'Albarine. \nPassage pas difficile mais assez gazeux tout de même, en vire au début puis très vite à flan de falaise.  \nPuis on redescend vers une petite passerelle, et on remonte au sommet de la falaise dans un court passage en devers.  \nC'est une bonne viaferrata d'initiation, mais elle n'est pas faite pour des gens qui craignent trop le gaz.\n(Merci à Eric Butruille)\n\nDescription 2:\nC'est une via à deux vitesses : la 1ère moitié est un sentier sécurisé qui permet de s'entraîner au maniement des mousquetons, à flan de falaise, caché de la vallée par les arbres (côte 720m). Après 30mn, la via débouche sur le plat de résistance avec du gaz sous le pied car la vallée se dévoile dans sa totalité 200m en dessous(côte 725m). Le rocher est bien nu sans verdure. C'est une traversée avec des petites montées toniques et descentes, des replats où l'on peut se doubler, se reposer et jeter un coup d'œil et admirer la Cluse des Hôpitaux avec Tenay au loin. Quelques passages en dévers dans le vide (730m) pour arriver à une passerelle de 10m bien mouvante. On remonte pour atteindre un surplomb court qui mérite une cotation AD+.\nBonnes prises rocher, câblé non gainé, queue de cochon.\nVia à éviter les lendemains de pluie car il y a beaucoup de passages terreux.\n(Merci à Jean-Michel Grisard)\n\nNouveauté 2005:\nUn nouveau parcours au dessus de la première partie dans les buis. Beaucoup plus ludique il commence par un pont de singe et continue avec échelle et poutres. La sortie sert d'échappatoire avant de rejoindre l'ancienne partie quand celle-ci quitte les buis. \n\n"
+            "label": "longueur",
+            "type": "number"
         }
-      }
-    }
-  ]
+    },
+    "data": [
+        {
+            "name": "Hostiaz » La Guinguette",
+            "latitude": "45.916056",
+            "longitude": "5.5186672",
+            "infos": {
+                "starting_altitude": {
+                    "label": "altitude de départ",
+                    "text": "760 mètres"
+                },
+                "arrival_altitude": {
+                    "label": "altitude d'arrivée",
+                    "text": "745 mètres"
+                },
+                "drop": {
+                    "label": "dénivelé",
+                    "text": "15 mètres"
+                },
+                "difficulty": {
+                    "label": "difficulté",
+                    "text": "D"
+                },
+                "length": {
+                    "label": "longueur",
+                    "text": "650 mètres"
+                },
+                "price": {
+                    "label": "prix",
+                    "text": "Gratuit"
+                },
+                "description": {
+                    "label": "description",
+                    "text": "Description 1:\nLa viaferrata débute sur un sentier glissant, pour atteindre une vire dans la falaise.\nLà, les choses deviennent intérressante avec une belle vue sur le village de Tenay et toute la vallée de l'Albarine. \nPassage pas difficile mais assez gazeux tout de même, en vire au début puis très vite à flan de falaise.  \nPuis on redescend vers une petite passerelle, et on remonte au sommet de la falaise dans un court passage en devers.  \nC'est une bonne viaferrata d'initiation, mais elle n'est pas faite pour des gens qui craignent trop le gaz.\n(Merci à Eric Butruille)\n\nDescription 2:\nC'est une via à deux vitesses : la 1ère moitié est un sentier sécurisé qui permet de s'entraîner au maniement des mousquetons, à flan de falaise, caché de la vallée par les arbres (côte 720m). Après 30mn, la via débouche sur le plat de résistance avec du gaz sous le pied car la vallée se dévoile dans sa totalité 200m en dessous(côte 725m). Le rocher est bien nu sans verdure. C'est une traversée avec des petites montées toniques et descentes, des replats où l'on peut se doubler, se reposer et jeter un coup d'œil et admirer la Cluse des Hôpitaux avec Tenay au loin. Quelques passages en dévers dans le vide (730m) pour arriver à une passerelle de 10m bien mouvante. On remonte pour atteindre un surplomb court qui mérite une cotation AD+.\nBonnes prises rocher, câblé non gainé, queue de cochon.\nVia à éviter les lendemains de pluie car il y a beaucoup de passages terreux.\n(Merci à Jean-Michel Grisard)\n\nNouveauté 2005:\nUn nouveau parcours au dessus de la première partie dans les buis. Beaucoup plus ludique il commence par un pont de singe et continue avec échelle et poutres. La sortie sert d'échappatoire avant de rejoindre l'ancienne partie quand celle-ci quitte les buis. \n\n"
+                }
+            }
+        }
+    ]
 }
