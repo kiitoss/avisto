@@ -52,8 +52,8 @@ def get_data(url, properties):
         "latitude": get_text(soup, latitude_prop),
         "longitude": get_text(soup, longitude_prop),
         "infos": {
-            key: {"label": item.get("label"), "text": get_text(soup, item)}
-            for key, item in infos_prop.items()
+            info.get('id'): {"label": info.get("label"), "text": get_text(soup, info)}
+            for info in infos_prop
         },
     }
 
@@ -72,7 +72,12 @@ def collect_data(sources):
         name, base_url, home_url, selectors, properties = source.values()
 
         infos = properties.get("infos")
-        filters = {key: item.get("filter") for key, item in infos.items()}
+
+        filters = {
+            info.get("id"): {"label": info.get("label"), **info.get("filter", {})}
+            for info in infos
+            if info.get("filter")
+        }
 
         print(f"- Collecting data from {base_url}...")
 
