@@ -1,5 +1,6 @@
 import React from "react";
 import RangeSlider from "./RangeSlider";
+import MultipleSelect from "./MultipleSelect";
 import { capitalize } from "../utils";
 
 import Accordion from "@mui/material/Accordion";
@@ -65,6 +66,12 @@ const FilterAccordion = (props) => {
                   </h4>
                   {infoFilter.type === "number" && (
                     <RangeSlider min={infoFilter.min} max={infoFilter.max} />
+                  )}
+                  {infoFilter.type === "selectmultiple" && (
+                    <MultipleSelect
+                      options={infoFilter.options}
+                      initialValues={infoFilter.options}
+                    />
                   )}
                 </li>
               ))}

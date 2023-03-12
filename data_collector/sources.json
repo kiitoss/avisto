@@ -48,7 +48,7 @@
           "selector": "tr:has(td.topoTitre) > td.topoTitre:nth-child(3) + td",
           "index": 0,
           "filter": {
-            "type": "select",
+            "type": "selectmultiple",
             "options": [
               "F-",
               "F",
