@@ -19,8 +19,26 @@ const getColoredMarkerIcon = (color) => {
   });
 };
 
+const isValid = (marker, markerFilters) => {
+  for (const [key, value] of Object.entries(markerFilters[marker.origin])) {
+    if (value.type === "number") {
+      const numbers = marker.filters[key];
+      if (numbers < value.value.min || numbers > value.value.max) {
+        return false;
+      }
+    }
+  }
+  return true;
+};
+
 const Map = (props) => {
-  const { zoom = 7, markers, onMarkerClick, currentMarkerId } = props;
+  const {
+    zoom = 7,
+    markers,
+    onMarkerClick,
+    currentMarkerId,
+    markerFilters,
+  } = props;
 
   const initMarker = (ref) => {
     if (!ref) {
@@ -43,32 +61,35 @@ const Map = (props) => {
       {...props}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      {markers?.map((marker) => (
-        <Marker
-          ref={initMarker}
-          key={marker.id}
-          position={marker.position}
-          data={marker}
-          eventHandlers={{
-            click: (e) => {
-              onMarkerClick(e.target.options.data);
-            },
-            mouseover: (e) => e.target.openPopup(),
-            mouseout: (e) => {
-              if (e.target.options.data?.id !== currentMarkerId) {
-                e.target.closePopup();
+      {markers?.map(
+        (marker) =>
+          isValid(marker, markerFilters) && (
+            <Marker
+              ref={initMarker}
+              key={marker.id}
+              position={marker.position}
+              data={marker}
+              eventHandlers={{
+                click: (e) => {
+                  onMarkerClick(e.target.options.data);
+                },
+                mouseover: (e) => e.target.openPopup(),
+                mouseout: (e) => {
+                  if (e.target.options.data?.id !== currentMarkerId) {
+                    e.target.closePopup();
+                  }
+                },
+              }}
+              icon={
+                marker.id === currentMarkerId
+                  ? getColoredMarkerIcon("red")
+                  : getColoredMarkerIcon(marker.color)
               }
-            },
-          }}
-          icon={
-            marker.id === currentMarkerId
-              ? getColoredMarkerIcon("red")
-              : getColoredMarkerIcon(marker.color)
-          }
-        >
-          <Popup autoClose={false}>{marker.name}</Popup>
-        </Marker>
-      ))}
+            >
+              <Popup autoClose={false}>{marker.name}</Popup>
+            </Marker>
+          )
+      )}
     </MapContainer>
   );
 };

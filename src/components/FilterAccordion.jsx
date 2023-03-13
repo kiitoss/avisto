@@ -9,8 +9,14 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const FilterAccordion = (props) => {
-  const { index, backgroundColor, handleCheckboxChange, dataSource, filters } =
-    props;
+  const {
+    index,
+    backgroundColor,
+    handleCheckboxChange,
+    dataSource,
+    filters,
+    onUpdate,
+  } = props;
 
   return (
     <div>
@@ -65,12 +71,17 @@ const FilterAccordion = (props) => {
                     {capitalize(infoFilter.label)} :
                   </h4>
                   {infoFilter.type === "number" && (
-                    <RangeSlider min={infoFilter.min} max={infoFilter.max} />
+                    <RangeSlider
+                      min={infoFilter.min}
+                      max={infoFilter.max}
+                      onUpdate={(newValue) => onUpdate(key, newValue)}
+                    />
                   )}
                   {infoFilter.type === "selectmultiple" && (
                     <MultipleSelect
                       options={infoFilter.options}
                       initialValues={infoFilter.options}
+                      onUpdate={(newValue) => onUpdate(key, newValue)}
                     />
                   )}
                 </li>

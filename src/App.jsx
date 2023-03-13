@@ -37,6 +37,12 @@ const App = () => {
     setCurrentMarker(marker);
   };
 
+  const updateMarkerFilters = (sourceName, filterKey, newValue) => {
+    const newFilters = { ...dataFilters };
+    newFilters[sourceName][filterKey].value = newValue;
+    setDataFilters(newFilters);
+  };
+
   useEffect(() => {
     const fetchMarkers = async () => {
       const newMarkers = [];
@@ -61,22 +67,31 @@ const App = () => {
             const info = infos[key];
 
             if (infoFilter.type === "number") {
-              const numbers = info.text.match(/\d+/g)?.map(Number) || [];
+              const numbers = info.text.match(/\d+/g)?.map(Number) || [0];
 
               markerFilters[key] = numbers.length === 1 ? numbers[0] : numbers;
 
               if (!infoFilter.min || markerFilters[key] < infoFilter.min) {
                 infoFilter.min = markerFilters[key];
+                filters[key].value = {
+                  ...filters[key].value,
+                  min: markerFilters[key],
+                };
               }
 
               if (!infoFilter.max || markerFilters[key] > infoFilter.max) {
                 infoFilter.max = markerFilters[key];
+                filters[key].value = {
+                  ...filters[key].value,
+                  max: markerFilters[key],
+                };
               }
             }
           }
 
           return {
             id: markerId++,
+            origin: dataSource.name,
             position: [latitude, longitude],
             color: dataSource.markerColor,
             filters: markerFilters,
@@ -118,6 +133,7 @@ const App = () => {
         dataSources={dataSources}
         setDataSources={setDataSources}
         dataFilters={dataFilters}
+        updateMarkerFilters={updateMarkerFilters}
       />
 
       <Sidebar
@@ -133,6 +149,7 @@ const App = () => {
           markers={markers}
           className="h-screen"
           currentMarkerId={currentMarker ? currentMarker.id : null}
+          markerFilters={dataFilters}
         />
       </section>
     </main>

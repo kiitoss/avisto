@@ -4,12 +4,23 @@ import { HiX } from "react-icons/hi";
 import FilterAccordion from "./FilterAccordion";
 
 const Filters = (props) => {
-  const { isOpen, setIsOpen, dataSources, setDataSources, dataFilters } = props;
+  const {
+    isOpen,
+    setIsOpen,
+    dataSources,
+    setDataSources,
+    dataFilters,
+    updateMarkerFilters,
+  } = props;
 
   const handleCheckboxChange = (e, index) => {
     const newDataSources = [...dataSources];
     newDataSources[index].enabled = !newDataSources[index].enabled;
     setDataSources(newDataSources);
+  };
+
+  const handleUpdateFilter = (sourceName, filterKey, newValue) => {
+    updateMarkerFilters(sourceName, filterKey, newValue);
   };
 
   return (
@@ -42,6 +53,9 @@ const Filters = (props) => {
                 handleCheckboxChange={handleCheckboxChange}
                 dataSource={dataSource}
                 filters={filters}
+                onUpdate={(filterKey, newValue) =>
+                  handleUpdateFilter(dataSource.name, filterKey, newValue)
+                }
               />
             </li>
           );

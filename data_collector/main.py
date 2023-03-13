@@ -84,8 +84,6 @@ def collect_data(sources):
         soup = get_soup(base_url + home_url)
         urls = get_urls(soup, selectors, base_url)
 
-        urls = [urls[0]]
-
         data = []
 
         for i, url in enumerate(urls):
