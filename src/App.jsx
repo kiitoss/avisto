@@ -86,6 +86,17 @@ const App = () => {
                   max: markerFilters[key],
                 };
               }
+            } else if (infoFilter.type === "selectmultiple") {
+              const values =
+                info.text.match(
+                  new RegExp(
+                    infoFilter.options.map((o) => `\\b${o}\\b`).join("|"),
+                    "gi"
+                  )
+                ) || [];
+
+              markerFilters[key] = values;
+              filters[key].value = infoFilter.options;
             }
           }
 

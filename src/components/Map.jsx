@@ -26,6 +26,16 @@ const isValid = (marker, markerFilters) => {
       if (numbers < value.value.min || numbers > value.value.max) {
         return false;
       }
+    } else if (value.type === "selectmultiple") {
+      const currentValues = value.value;
+      const markerValues = marker.filters[key];
+
+      if (
+        markerValues.length != 0 &&
+        !markerValues.some((markerValue) => currentValues.includes(markerValue))
+      ) {
+        return false;
+      }
     }
   }
   return true;

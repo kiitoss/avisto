@@ -6,7 +6,7 @@ const RangeSlider = (props) => {
   const { min, max, onUpdate } = props;
   const [value, setValue] = useState([min, max]);
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (_, newValue) => {
     onUpdate({
       min: newValue[0],
       max: newValue[1],

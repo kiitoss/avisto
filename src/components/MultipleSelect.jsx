@@ -3,7 +3,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 
 export default function MultipleSelect(props) {
-  const { options = [], initialValues = [] } = props;
+  const { options = [], initialValues = [], onUpdate } = props;
   const [values, setValues] = useState(initialValues);
 
   const handleChange = (event) => {
@@ -11,6 +11,7 @@ export default function MultipleSelect(props) {
       target: { value },
     } = event;
     setValues(typeof value === "string" ? value.split(",") : value);
+    onUpdate(typeof value === "string" ? value.split(",") : value);
   };
 
   return (
