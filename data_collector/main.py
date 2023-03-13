@@ -48,19 +48,20 @@ def get_data(url, properties):
     name_prop, latitude_prop, longitude_prop, infos_prop = properties.values()
 
     data = {
-        'name': get_text(soup, name_prop),
-        'latitude': get_text(soup, latitude_prop),
-        'longitude': get_text(soup, longitude_prop),
-        'infos': [{'label': item.get('label'), 'text': get_text(soup, item)}
-                  for key, item in infos_prop.items()]
+        "name": get_text(soup, name_prop),
+        "latitude": get_text(soup, latitude_prop),
+        "longitude": get_text(soup, longitude_prop),
+        "infos": {
+            info.get('id'): {"label": info.get("label"), "text": get_text(soup, info)}
+            for info in infos_prop
+        },
     }
 
     return data
 
 
-def save_json(name, data):
+def save_json(name, output):
     filename = f"{name}.json"
-    output = {"date": datetime.today().strftime("%Y-%m-%d %H:%M:%S"), "data": data}
 
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=4, ensure_ascii=False)
@@ -69,20 +70,34 @@ def save_json(name, data):
 def collect_data(sources):
     for source in sources:
         name, base_url, home_url, selectors, properties = source.values()
+
+        infos = properties.get("infos")
+
+        filters = {
+            info.get("id"): {"label": info.get("label"), **info.get("filter", {})}
+            for info in infos
+            if info.get("filter")
+        }
+
         print(f"- Collecting data from {base_url}...")
 
         soup = get_soup(base_url + home_url)
         urls = get_urls(soup, selectors, base_url)
-        
-        infos = []
+
+        data = []
 
         for i, url in enumerate(urls):
             print(f"({i+1}/{len(urls)})\t- Collecting data from {url}")
-            infos.append(get_data(url, properties))
+            data.append(get_data(url, properties))
 
         print()
 
-        save_json(name, infos)
+        output = {
+            "date": datetime.today().strftime("%Y-%m-%d %H:%M:%S"),
+            "filters": filters,
+            "data": data,
+        }
+        save_json(name, output)
 
     print("Data collection finished.")
 

@@ -24,6 +24,8 @@ const App = () => {
     },
   ]);
 
+  const [dataFilters, setDataFilters] = useState([]);
+
   const center = [45.764043, 4.835659];
 
   const toggleFilters = () => {
@@ -35,25 +37,91 @@ const App = () => {
     setCurrentMarker(marker);
   };
 
+  const updateMarkerFilters = (sourceName, filterKey, newValue) => {
+    const newFilters = { ...dataFilters };
+    newFilters[sourceName][filterKey].value = newValue;
+    setDataFilters(newFilters);
+  };
+
   useEffect(() => {
     const fetchMarkers = async () => {
       const newMarkers = [];
-      let id = 0;
+      let markerId = 0;
+
       for (const dataSource of dataSources) {
-        if (dataSource.enabled) {
-          const response = await fetch(dataSource.file);
-          const json = await response.json();
-          const markers = json.data.map(({ latitude, longitude, ...rest }) => ({
-            ...rest,
-            color: dataSource.markerColor,
-            id: id++,
-            position: [latitude, longitude],
-          }));
-          newMarkers.push(...markers);
+        if (!dataSource.enabled) {
+          continue;
         }
+
+        const response = await fetch(dataSource.file);
+        const { data, filters: rawFilters } = await response.json();
+
+        const filters = Object.fromEntries(
+          Object.entries(rawFilters).filter(([_, value]) => value !== null)
+        );
+
+        const markers = data.map(({ latitude, longitude, infos, ...rest }) => {
+          const markerFilters = {};
+
+          for (const [key, infoFilter] of Object.entries(filters)) {
+            const info = infos[key];
+
+            if (infoFilter.type === "number") {
+              const numbers = info.text.match(/\d+/g)?.map(Number) || [0];
+
+              markerFilters[key] = numbers.length === 1 ? numbers[0] : numbers;
+
+              if (!infoFilter.min || markerFilters[key] < infoFilter.min) {
+                infoFilter.min = markerFilters[key];
+                filters[key].value = {
+                  ...filters[key].value,
+                  min: markerFilters[key],
+                };
+              }
+
+              if (!infoFilter.max || markerFilters[key] > infoFilter.max) {
+                infoFilter.max = markerFilters[key];
+                filters[key].value = {
+                  ...filters[key].value,
+                  max: markerFilters[key],
+                };
+              }
+            } else if (infoFilter.type === "selectmultiple") {
+              const values =
+                info.text.match(
+                  new RegExp(
+                    infoFilter.options.map((o) => `\\b${o}\\b`).join("|"),
+                    "gi"
+                  )
+                ) || [];
+
+              markerFilters[key] = values;
+              filters[key].value = infoFilter.options;
+            }
+          }
+
+          return {
+            id: markerId++,
+            origin: dataSource.name,
+            position: [latitude, longitude],
+            color: dataSource.markerColor,
+            filters: markerFilters,
+            infos,
+            ...rest,
+          };
+        });
+
+        setDataFilters((prevDataFilters) => ({
+          ...prevDataFilters,
+          [dataSource.name]: filters,
+        }));
+
+        newMarkers.push(...markers);
       }
+
       setMarkers(newMarkers);
     };
+
     fetchMarkers();
   }, [dataSources]);
 
@@ -75,6 +143,8 @@ const App = () => {
         setIsOpen={setFiltersOpen}
         dataSources={dataSources}
         setDataSources={setDataSources}
+        dataFilters={dataFilters}
+        updateMarkerFilters={updateMarkerFilters}
       />
 
       <Sidebar
@@ -90,6 +160,7 @@ const App = () => {
           markers={markers}
           className="h-screen"
           currentMarkerId={currentMarker ? currentMarker.id : null}
+          markerFilters={dataFilters}
         />
       </section>
     </main>

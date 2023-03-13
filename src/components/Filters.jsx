@@ -1,17 +1,31 @@
 import React from "react";
 import markerColors from "../marker-colors";
 import { HiX } from "react-icons/hi";
+import FilterAccordion from "./FilterAccordion";
 
-const Filters = ({ isOpen, setIsOpen, dataSources, setDataSources }) => {
+const Filters = (props) => {
+  const {
+    isOpen,
+    setIsOpen,
+    dataSources,
+    setDataSources,
+    dataFilters,
+    updateMarkerFilters,
+  } = props;
+
   const handleCheckboxChange = (e, index) => {
     const newDataSources = [...dataSources];
     newDataSources[index].enabled = !newDataSources[index].enabled;
     setDataSources(newDataSources);
   };
 
+  const handleUpdateFilter = (sourceName, filterKey, newValue) => {
+    updateMarkerFilters(sourceName, filterKey, newValue);
+  };
+
   return (
     <div
-      className={`opacity-90 absolute top-0 left-0 h-screen w-64 max-w-screen bg-gray-800 text-white transition-all duration-300 transform ${
+      className={`opacity-90 absolute top-0 left-0 h-screen overflow-auto w-72 max-w-screen bg-gray-800 text-white transition-all duration-300 transform ${
         isOpen ? "" : "-translate-x-full"
       }`}
     >
@@ -25,28 +39,27 @@ const Filters = ({ isOpen, setIsOpen, dataSources, setDataSources }) => {
         </button>
       </div>
       <ul className="py-4">
-        {dataSources.map((dataSource, index) => (
-          <li key={index} className="flex">
-            <label className="grow hover:bg-gray-700 flex items-center cursor-pointer">
-              <span
-                style={{
-                  backgroundColor: markerColors[dataSource.markerColor]
+        {dataSources.map((dataSource, index) => {
+          const filters = dataFilters[dataSource.name];
+          return (
+            <li key={index} className="flex flex-col">
+              <FilterAccordion
+                index={index}
+                backgroundColor={
+                  markerColors[dataSource.markerColor]
                     ? markerColors[dataSource.markerColor]
-                    : markerColors[Object.keys(markerColors)[0]],
-                }}
-                className="mr-4 h-full w-2"
-              ></span>
-              <input
-                type="checkbox"
-                checked={dataSource.enabled}
-                name={`checkbox-${index}`}
-                className="mr-2 pl-4"
-                onChange={(e) => handleCheckboxChange(e, index)}
+                    : markerColors[Object.keys(markerColors)[0]]
+                }
+                handleCheckboxChange={handleCheckboxChange}
+                dataSource={dataSource}
+                filters={filters}
+                onUpdate={(filterKey, newValue) =>
+                  handleUpdateFilter(dataSource.name, filterKey, newValue)
+                }
               />
-              <span className="py-2">{dataSource.name}</span>
-            </label>
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
