@@ -70,7 +70,7 @@ const FilterAccordion = (props) => {
                   <h4 className="font-bold pb-1">
                     {capitalize(infoFilter.label)} :
                   </h4>
-                  {infoFilter.type === "number" && (
+                  {infoFilter.type === "range" && (
                     <RangeSlider
                       min={infoFilter.min}
                       max={infoFilter.max}

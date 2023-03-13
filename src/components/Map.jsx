@@ -19,28 +19,6 @@ const getColoredMarkerIcon = (color) => {
   });
 };
 
-const isValid = (marker, markerFilters) => {
-  for (const [key, value] of Object.entries(markerFilters[marker.origin])) {
-    if (value.type === "number") {
-      const numbers = marker.filters[key];
-      if (numbers < value.value.min || numbers > value.value.max) {
-        return false;
-      }
-    } else if (value.type === "selectmultiple") {
-      const currentValues = value.value;
-      const markerValues = marker.filters[key];
-
-      if (
-        markerValues.length != 0 &&
-        !markerValues.some((markerValue) => currentValues.includes(markerValue))
-      ) {
-        return false;
-      }
-    }
-  }
-  return true;
-};
-
 const Map = (props) => {
   const {
     zoom = 7,
@@ -73,7 +51,7 @@ const Map = (props) => {
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {markers?.map(
         (marker) =>
-          isValid(marker, markerFilters) && (
+          marker.isVisible && (
             <Marker
               ref={initMarker}
               key={marker.id}

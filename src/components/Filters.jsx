@@ -6,17 +6,15 @@ import FilterAccordion from "./FilterAccordion";
 const Filters = (props) => {
   const {
     isOpen,
-    setIsOpen,
+    onClose,
     dataSources,
-    setDataSources,
     dataFilters,
     updateMarkerFilters,
+    toggleDataSource,
   } = props;
 
   const handleCheckboxChange = (e, index) => {
-    const newDataSources = [...dataSources];
-    newDataSources[index].enabled = !newDataSources[index].enabled;
-    setDataSources(newDataSources);
+    toggleDataSource(index);
   };
 
   const handleUpdateFilter = (sourceName, filterKey, newValue) => {
@@ -32,7 +30,7 @@ const Filters = (props) => {
       <div className="flex items-center justify-between pt-4 text-xl font-bold px-4">
         <h2 className="mx-auto">Filters</h2>
         <button
-          onClick={() => setIsOpen(false)}
+          onClick={onClose}
           className="text-white hover:text-gray-300 focus:outline-none"
         >
           <HiX />
