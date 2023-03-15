@@ -6,124 +6,77 @@ import Sidebar from "./components/Sidebar";
 
 import { HiAdjustments } from "react-icons/hi";
 
+import SOURCES from "./sources";
+
+const MAP_CENTER = [45.764043, 4.835659];
+
 const App = () => {
+  const [markers, setMarkers] = useState([]);
+  const [filters, setFilters] = useState({});
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [currentMarker, setCurrentMarker] = useState(null);
 
-  const [markers, setMarkers] = useState(null);
-
-  // do not use the red color for markers
-  // because it is already used for the clicked marker
-  const [dataSources, setDataSources] = useState([
-    {
-      name: "via-ferrata",
-      enabled: true,
-      file: "./via-ferrata.json",
-      markerColor: "green",
-    },
-  ]);
-
-  const [dataFilters, setDataFilters] = useState([]);
-
-  const center = [45.764043, 4.835659];
-
+  // open/close filters
   const toggleFilters = () => {
     setFiltersOpen(!filtersOpen);
   };
 
+  // update sidebar + current marker
   const handleMarkerClick = (marker) => {
-    setSidebarOpen(true);
-    setCurrentMarker(marker);
+    if (currentMarker?.id === marker.id) {
+      setCurrentMarker(null);
+      setSidebarOpen(false);
+    } else {
+      setCurrentMarker(marker);
+      setSidebarOpen(true);
+    }
   };
 
-  const updateMarkerFilters = (sourceName, filterKey, newValue) => {
-    const newFilters = { ...dataFilters };
-    newFilters[sourceName][filterKey].value = newValue;
-    setDataFilters(newFilters);
+  // update filters
+  const handleFiltersChange = (newFilters) => {
+    setFilters({
+      ...newFilters,
+    });
   };
 
+  // set up marker and filters
   useEffect(() => {
-    const fetchMarkers = async () => {
+    const fetchData = async () => {
       const newMarkers = [];
-      let markerId = 0;
+      const newFilters = {};
 
-      for (const dataSource of dataSources) {
-        if (!dataSource.enabled) {
-          continue;
-        }
+      let id = 0;
 
-        const response = await fetch(dataSource.file);
-        const { data, filters: rawFilters } = await response.json();
+      for (const source of SOURCES) {
+        const response = await fetch(source.file);
+        const { points, filters } = await response.json();
 
-        const filters = Object.fromEntries(
-          Object.entries(rawFilters).filter(([_, value]) => value !== null)
-        );
-
-        const markers = data.map(({ latitude, longitude, infos, ...rest }) => {
-          const markerFilters = {};
-
-          for (const [key, infoFilter] of Object.entries(filters)) {
-            const info = infos[key];
-
-            if (infoFilter.type === "number") {
-              const numbers = info.text.match(/\d+/g)?.map(Number) || [0];
-
-              markerFilters[key] = numbers.length === 1 ? numbers[0] : numbers;
-
-              if (!infoFilter.min || markerFilters[key] < infoFilter.min) {
-                infoFilter.min = markerFilters[key];
-                filters[key].value = {
-                  ...filters[key].value,
-                  min: markerFilters[key],
-                };
-              }
-
-              if (!infoFilter.max || markerFilters[key] > infoFilter.max) {
-                infoFilter.max = markerFilters[key];
-                filters[key].value = {
-                  ...filters[key].value,
-                  max: markerFilters[key],
-                };
-              }
-            } else if (infoFilter.type === "selectmultiple") {
-              const values =
-                info.text.match(
-                  new RegExp(
-                    infoFilter.options.map((o) => `\\b${o}\\b`).join("|"),
-                    "gi"
-                  )
-                ) || [];
-
-              markerFilters[key] = values;
-              filters[key].value = infoFilter.options;
-            }
-          }
-
+        const markers = points.map((point) => {
           return {
-            id: markerId++,
-            origin: dataSource.name,
-            position: [latitude, longitude],
-            color: dataSource.markerColor,
-            filters: markerFilters,
-            infos,
-            ...rest,
+            id: id++,
+            source: source.id,
+            ...point,
           };
         });
 
-        setDataFilters((prevDataFilters) => ({
-          ...prevDataFilters,
-          [dataSource.name]: filters,
-        }));
-
         newMarkers.push(...markers);
+
+        newFilters[source.id] = {
+          is_active: true,
+          ...filters,
+        };
       }
 
+      // set up states
       setMarkers(newMarkers);
+      setFilters({
+        ...newFilters,
+      });
     };
 
-    fetchMarkers();
-  }, [dataSources]);
+    fetchData();
+  }, []);
 
   return (
     <main>
@@ -140,11 +93,11 @@ const App = () => {
 
       <Filters
         isOpen={filtersOpen}
-        setIsOpen={setFiltersOpen}
-        dataSources={dataSources}
-        setDataSources={setDataSources}
-        dataFilters={dataFilters}
-        updateMarkerFilters={updateMarkerFilters}
+        onClose={() => setFiltersOpen(false)}
+        filters={filters}
+        onChange={(newFilters) => {
+          handleFiltersChange(newFilters);
+        }}
       />
 
       <Sidebar
@@ -155,12 +108,12 @@ const App = () => {
 
       <section className="-z-10 absolute top-0 left-0 w-screen h-screen">
         <Map
-          center={center}
+          center={MAP_CENTER}
           onMarkerClick={handleMarkerClick}
           markers={markers}
           className="h-screen"
           currentMarkerId={currentMarker ? currentMarker.id : null}
-          markerFilters={dataFilters}
+          filters={filters}
         />
       </section>
     </main>

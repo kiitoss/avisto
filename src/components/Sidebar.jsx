@@ -1,9 +1,13 @@
 import React from "react";
 import Text from "./Text";
 import { HiX } from "react-icons/hi";
-import { capitalize } from "../utils";
+import { capitalize, getSourceById } from "../utils";
 
-const Sidebar = ({ isOpen, setIsOpen, marker }) => {
+const Sidebar = (props) => {
+  const { isOpen, setIsOpen, marker } = props;
+
+  const labels = getSourceById(marker?.source)?.labels;
+
   return (
     <div
       className={`opacity-90 absolute w-96 max-w-full h-screen top-0 right-0 overflow-hidden ${
@@ -31,11 +35,13 @@ const Sidebar = ({ isOpen, setIsOpen, marker }) => {
               {marker.name}
             </h3>
             <ul>
-              {Object.entries(marker.infos).map(([key, { label, text }]) => {
+              {Object.entries(marker.data).map(([key, value]) => {
                 return (
                   <li className="py-1" key={key}>
-                    <h4 className="text-lg font-bold">{capitalize(label)} :</h4>
-                    <Text text={text} />
+                    <h4 className="text-lg font-bold">
+                      {capitalize(labels[key])} :
+                    </h4>
+                    <Text text={value?.toString()} />
                   </li>
                 );
               })}

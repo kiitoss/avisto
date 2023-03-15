@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import RangeSlider from "./RangeSlider";
 import MultipleSelect from "./MultipleSelect";
 import { capitalize } from "../utils";
+import markerColors from "../marker-colors";
 
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -9,14 +10,34 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const FilterAccordion = (props) => {
-  const {
-    index,
-    backgroundColor,
-    handleCheckboxChange,
-    dataSource,
-    filters,
-    onUpdate,
-  } = props;
+  const { filters, source, onChange } = props;
+  const { name, labels, color } = source;
+
+  const handleCheckboxChange = (e) => {
+    onChange({
+      ...filters,
+      is_active: e.target.checked,
+    });
+  };
+
+  const onUpdate = (key, value) => {
+    filters[key].value = value;
+    onChange(filters);
+  };
+
+  useEffect(() => {
+    Object.entries(filters).map(([key, filter]) => {
+      if (!filter.type) return;
+
+      if (!filter.value) {
+        if (filter.type === "range") {
+          filter.value = { min: filter.min, max: filter.max };
+        } else if (filter.type === "multiselect") {
+          filter.value = filter.options;
+        }
+      }
+    });
+  }, []);
 
   return (
     <div>
@@ -47,47 +68,47 @@ const FilterAccordion = (props) => {
             <label className="grow flex items-center cursor-pointer">
               <span
                 style={{
-                  backgroundColor: backgroundColor,
+                  backgroundColor: markerColors[color],
                 }}
                 className="mr-4 h-full w-2"
               ></span>
               <input
                 type="checkbox"
-                checked={dataSource.enabled}
-                name={`checkbox-${index}`}
+                checked={filters.is_active}
                 className="mr-4 pl-4"
-                onChange={(e) => handleCheckboxChange(e, index)}
+                onChange={handleCheckboxChange}
               />
-              <span className="py-2 text-lg">{dataSource.name}</span>
+              <span className="py-2 text-lg">{name}</span>
             </label>
           </div>
         </AccordionSummary>
         <AccordionDetails>
-          {filters && (
-            <ul className="mt-2 text-sm">
-              {Object.entries(filters).map(([key, infoFilter]) => (
-                <li key={key} className="pb-4">
-                  <h4 className="font-bold pb-1">
-                    {capitalize(infoFilter.label)} :
-                  </h4>
-                  {infoFilter.type === "number" && (
-                    <RangeSlider
-                      min={infoFilter.min}
-                      max={infoFilter.max}
-                      onUpdate={(newValue) => onUpdate(key, newValue)}
-                    />
-                  )}
-                  {infoFilter.type === "selectmultiple" && (
-                    <MultipleSelect
-                      options={infoFilter.options}
-                      initialValues={infoFilter.options}
-                      onUpdate={(newValue) => onUpdate(key, newValue)}
-                    />
-                  )}
-                </li>
-              ))}
-            </ul>
-          )}
+          <ul className="mt-2 text-sm">
+            {Object.entries(filters).map(
+              ([key, filter]) =>
+                filter.type && (
+                  <li key={key} className="pb-4">
+                    <h4 className="font-bold pb-1">
+                      {capitalize(labels[key])} :
+                    </h4>
+                    {filter.type === "range" && (
+                      <RangeSlider
+                        min={filter.min}
+                        max={filter.max}
+                        onUpdate={(newValue) => onUpdate(key, newValue)}
+                      />
+                    )}
+                    {filter.type === "multiselect" && (
+                      <MultipleSelect
+                        options={filter.options}
+                        initialValues={filter.options}
+                        onUpdate={(newValue) => onUpdate(key, newValue)}
+                      />
+                    )}
+                  </li>
+                )
+            )}
+          </ul>
         </AccordionDetails>
       </Accordion>
     </div>

@@ -3,7 +3,7 @@ import React from "react";
 const Text = (props) => {
   const { text } = props;
   const paragraphs = text
-    .replace(/\n+$/, "")
+    ?.replace(/\n+$/, "")
     .split("\n")
     .map((paragraph, index) => (
       <p key={index} className="block pb-4">

@@ -1,27 +1,18 @@
 import React from "react";
-import markerColors from "../marker-colors";
 import { HiX } from "react-icons/hi";
 import FilterAccordion from "./FilterAccordion";
 
+import { getSourceById } from "../utils";
+
 const Filters = (props) => {
-  const {
-    isOpen,
-    setIsOpen,
-    dataSources,
-    setDataSources,
-    dataFilters,
-    updateMarkerFilters,
-  } = props;
+  const { isOpen, onClose, filters, onChange } = props;
 
-  const handleCheckboxChange = (e, index) => {
-    const newDataSources = [...dataSources];
-    newDataSources[index].enabled = !newDataSources[index].enabled;
-    setDataSources(newDataSources);
+  const handleChange = (id, newValue) => {
+    filters[id] = newValue;
+    onChange(filters);
   };
 
-  const handleUpdateFilter = (sourceName, filterKey, newValue) => {
-    updateMarkerFilters(sourceName, filterKey, newValue);
-  };
+  const sourceIds = Object.keys(filters);
 
   return (
     <div
@@ -32,30 +23,24 @@ const Filters = (props) => {
       <div className="flex items-center justify-between pt-4 text-xl font-bold px-4">
         <h2 className="mx-auto">Filters</h2>
         <button
-          onClick={() => setIsOpen(false)}
+          onClick={onClose}
           className="text-white hover:text-gray-300 focus:outline-none"
         >
           <HiX />
         </button>
       </div>
       <ul className="py-4">
-        {dataSources.map((dataSource, index) => {
-          const filters = dataFilters[dataSource.name];
+        {sourceIds.map((id) => {
+          const source = getSourceById(id);
+
           return (
-            <li key={index} className="flex flex-col">
+            <li key={id} className="flex flex-col">
               <FilterAccordion
-                index={index}
-                backgroundColor={
-                  markerColors[dataSource.markerColor]
-                    ? markerColors[dataSource.markerColor]
-                    : markerColors[Object.keys(markerColors)[0]]
-                }
-                handleCheckboxChange={handleCheckboxChange}
-                dataSource={dataSource}
-                filters={filters}
-                onUpdate={(filterKey, newValue) =>
-                  handleUpdateFilter(dataSource.name, filterKey, newValue)
-                }
+                filters={filters[id]}
+                source={source}
+                onChange={(newFilters) => {
+                  handleChange(id, newFilters);
+                }}
               />
             </li>
           );

@@ -1,6 +1,7 @@
 import React from "react";
 import markerColors from "../marker-colors";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { markerIsVisible, getSourceById } from "../utils";
 
 const getColoredMarkerIcon = (color) => {
   const colors = Object.keys(markerColors);
@@ -19,41 +20,11 @@ const getColoredMarkerIcon = (color) => {
   });
 };
 
-const isValid = (marker, markerFilters) => {
-  for (const [key, value] of Object.entries(markerFilters[marker.origin])) {
-    if (value.type === "number") {
-      const numbers = marker.filters[key];
-      if (numbers < value.value.min || numbers > value.value.max) {
-        return false;
-      }
-    } else if (value.type === "selectmultiple") {
-      const currentValues = value.value;
-      const markerValues = marker.filters[key];
-
-      if (
-        markerValues.length != 0 &&
-        !markerValues.some((markerValue) => currentValues.includes(markerValue))
-      ) {
-        return false;
-      }
-    }
-  }
-  return true;
-};
-
 const Map = (props) => {
-  const {
-    zoom = 7,
-    markers,
-    onMarkerClick,
-    currentMarkerId,
-    markerFilters,
-  } = props;
+  const { zoom = 7, markers, onMarkerClick, currentMarkerId, filters } = props;
 
   const initMarker = (ref) => {
-    if (!ref) {
-      return;
-    }
+    if (!ref) return;
 
     if (ref.options.data.id === currentMarkerId) {
       ref.openPopup();
@@ -71,35 +42,37 @@ const Map = (props) => {
       {...props}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      {markers?.map(
-        (marker) =>
-          isValid(marker, markerFilters) && (
-            <Marker
-              ref={initMarker}
-              key={marker.id}
-              position={marker.position}
-              data={marker}
-              eventHandlers={{
-                click: (e) => {
-                  onMarkerClick(e.target.options.data);
-                },
-                mouseover: (e) => e.target.openPopup(),
-                mouseout: (e) => {
-                  if (e.target.options.data?.id !== currentMarkerId) {
-                    e.target.closePopup();
-                  }
-                },
-              }}
-              icon={
-                marker.id === currentMarkerId
-                  ? getColoredMarkerIcon("red")
-                  : getColoredMarkerIcon(marker.color)
-              }
-            >
-              <Popup autoClose={false}>{marker.name}</Popup>
-            </Marker>
-          )
-      )}
+      {markers?.map((marker) => {
+        const color = getSourceById(marker.source).color;
+
+        if (!markerIsVisible(marker.data, filters[marker.source])) return;
+        return (
+          <Marker
+            ref={initMarker}
+            key={marker.id}
+            position={[marker.latitude, marker.longitude]}
+            data={marker}
+            eventHandlers={{
+              click: (e) => {
+                onMarkerClick(marker);
+              },
+              mouseover: (e) => e.target.openPopup(),
+              mouseout: (e) => {
+                if (e.target.options.data?.id !== currentMarkerId) {
+                  e.target.closePopup();
+                }
+              },
+            }}
+            icon={
+              marker.id === currentMarkerId
+                ? getColoredMarkerIcon("red")
+                : getColoredMarkerIcon(color)
+            }
+          >
+            <Popup autoClose={false}>{marker.name}</Popup>
+          </Marker>
+        );
+      })}
     </MapContainer>
   );
 };
