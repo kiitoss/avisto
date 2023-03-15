@@ -1,25 +1,18 @@
 import React from "react";
-import markerColors from "../marker-colors";
 import { HiX } from "react-icons/hi";
 import FilterAccordion from "./FilterAccordion";
 
+import { getSourceById } from "../utils";
+
 const Filters = (props) => {
-  const {
-    isOpen,
-    onClose,
-    dataSources,
-    dataFilters,
-    updateMarkerFilters,
-    toggleDataSource,
-  } = props;
+  const { isOpen, onClose, filters, onChange } = props;
 
-  const handleCheckboxChange = (e, index) => {
-    toggleDataSource(index);
+  const handleChange = (id, newValue) => {
+    filters[id] = newValue;
+    onChange(filters);
   };
 
-  const handleUpdateFilter = (sourceName, filterKey, newValue) => {
-    updateMarkerFilters(sourceName, filterKey, newValue);
-  };
+  const sourceIds = Object.keys(filters);
 
   return (
     <div
@@ -37,23 +30,17 @@ const Filters = (props) => {
         </button>
       </div>
       <ul className="py-4">
-        {dataSources.map((dataSource, index) => {
-          const filters = dataFilters[dataSource.name];
+        {sourceIds.map((id) => {
+          const source = getSourceById(id);
+
           return (
-            <li key={index} className="flex flex-col">
+            <li key={id} className="flex flex-col">
               <FilterAccordion
-                index={index}
-                backgroundColor={
-                  markerColors[dataSource.markerColor]
-                    ? markerColors[dataSource.markerColor]
-                    : markerColors[Object.keys(markerColors)[0]]
-                }
-                handleCheckboxChange={handleCheckboxChange}
-                dataSource={dataSource}
-                filters={filters}
-                onUpdate={(filterKey, newValue) =>
-                  handleUpdateFilter(dataSource.name, filterKey, newValue)
-                }
+                filters={filters[id]}
+                source={source}
+                onChange={(newFilters) => {
+                  handleChange(id, newFilters);
+                }}
               />
             </li>
           );
