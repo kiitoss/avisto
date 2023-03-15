@@ -157,7 +157,6 @@ class ListViaFerrata:
             json.dump(
                 {
                     "date": datetime.today().strftime("%Y-%m-%d %H:%M:%S"),
-                    "name": "via-ferrata",
                     "points": [via.toJSON() for via in self.vias],
                     "filters": self.filters,
                 },
