@@ -21,4 +21,4 @@ Whether you're a beginner or experienced, αvisto is the perfect tool to help yo
 ## Current activities
 
 - [x] via-ferratas ([https://www.viaferrata-fr.net/](https://www.viaferrata-fr.net/))
-- [ ] refuges.infos ([https://www.refuges.info/](https://www.refuges.info/))
+- [x] refuges.infos ([https://www.refuges.info/](https://www.refuges.info/))
