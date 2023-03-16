@@ -6,7 +6,7 @@
 
 ➡️ Check the website here : [https://kiitoss.github.io/avisto/](https://kiitoss.github.io/avisto/)
 
-![presentation](./assets/presentation.png)
+![presentation](./assets/presentation-cabins.png)
 
 ## What is αvisto ?
 
