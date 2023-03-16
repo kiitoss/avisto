@@ -20,7 +20,7 @@ const Sidebar = (props) => {
         }`}
       >
         <div className="flex items-center justify-between pt-4 text-xl font-bold px-4">
-          <h2 className="mx-auto">Infos</h2>
+          <h2 className="mx-auto">Informations</h2>
           <button
             onClick={() => setIsOpen(false)}
             className="text-white hover:text-gray-300 focus:outline-none"
@@ -34,14 +34,27 @@ const Sidebar = (props) => {
             <h3 className="text-xl text-center font-bold pb-4">
               {marker.name}
             </h3>
+            {marker.url && (
+              <p className="mb-4">
+                <span className="mr-2">&#10145;&#65039;</span>
+                <a
+                  className="underline"
+                  href={marker.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Lien vers la page officielle
+                </a>
+              </p>
+            )}
             <ul>
               {Object.entries(marker.data).map(([key, value]) => {
                 return (
                   <li className="py-1" key={key}>
                     <h4 className="text-lg font-bold">
-                      {capitalize(labels[key])} :
+                      {labels ? capitalize(labels[key]) : key} :
                     </h4>
-                    <Text text={value?.toString()} />
+                    <Text text={value?.toString() || "???"} />
                   </li>
                 );
               })}

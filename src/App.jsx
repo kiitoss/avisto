@@ -64,7 +64,9 @@ const App = () => {
 
         newFilters[source.id] = {
           is_active: true,
-          ...filters,
+          dataFilters: {
+            ...filters,
+          },
         };
       }
 
@@ -88,7 +90,7 @@ const App = () => {
         }`}
         onClick={toggleFilters}
       >
-        <HiAdjustments className="h-6 w-6 text-white-500 mr-2" /> Filters
+        <HiAdjustments className="h-6 w-6 text-white-500 mr-2" /> Filtres
       </button>
 
       <Filters

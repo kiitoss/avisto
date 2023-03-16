@@ -21,12 +21,12 @@ const FilterAccordion = (props) => {
   };
 
   const onUpdate = (key, value) => {
-    filters[key].value = value;
+    filters.dataFilters[key].value = value;
     onChange(filters);
   };
 
   useEffect(() => {
-    Object.entries(filters).map(([key, filter]) => {
+    Object.entries(filters.dataFilters).map(([key, filter]) => {
       if (!filter.type) return;
 
       if (!filter.value) {
@@ -51,7 +51,11 @@ const FilterAccordion = (props) => {
         }}
       >
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{ fill: "white" }} />}
+          expandIcon={
+            Object.entries(filters.dataFilters).length > 0 && (
+              <ExpandMoreIcon sx={{ fill: "white" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
           className="hover:bg-gray-700"
@@ -84,7 +88,7 @@ const FilterAccordion = (props) => {
         </AccordionSummary>
         <AccordionDetails>
           <ul className="mt-2 text-sm">
-            {Object.entries(filters).map(
+            {Object.entries(filters.dataFilters).map(
               ([key, filter]) =>
                 filter.type && (
                   <li key={key} className="pb-4">

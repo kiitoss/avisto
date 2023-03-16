@@ -1,7 +1,14 @@
 import React from "react";
 
 const Text = (props) => {
-  const { text } = props;
+  let { text } = props;
+
+  if (text == "true") {
+    text = "Oui";
+  } else if (text == "false") {
+    text = "Non";
+  }
+
   const paragraphs = text
     ?.replace(/\n+$/, "")
     .split("\n")

@@ -1,5 +1,3 @@
-import json
-from datetime import datetime
 import re
 
 from utils import get_soup, get_text, print_warn, print_fail
@@ -22,6 +20,7 @@ class ViaFerrata:
 
         self.latitude = float(latitude)
         self.longitude = float(longitude)
+        self.url = url
 
         # additional data
         starting_altitude = get_text(
@@ -91,9 +90,10 @@ class ViaFerrata:
 
         return matches
 
-    def toJSON(self) -> dict:
+    def to_json(self) -> dict:
         return {
             "name": self.name,
+            "url": self.url,
             "latitude": self.latitude,
             "longitude": self.longitude,
             "data": self.data,
@@ -106,12 +106,12 @@ class ListViaFerrata:
         self.soup = get_soup(self.base_url + "via-ferrata.html")
         self.urls = self.get_urls()
 
-        self.vias = self.collect_vias()
+        self.items = self.collect_vias()
 
         self.filters = {}
         # range filters
         for key in ["starting_altitude", "arrival_altitude", "drop", "length"]:
-            values = [via.data[key] for via in self.vias if via.data[key]]
+            values = [via.data[key] for via in self.items if via.data[key]]
             self.filters[key] = {
                 "type": "range",
                 "min": min(values) if len(values) else 0,
@@ -148,19 +148,3 @@ class ListViaFerrata:
                         url = self.base_url + url.lstrip("/")
                     urls.append(url)
         return urls
-
-    def save_json(self, name="via-ferrata") -> None:
-        """Save the list of vias in a json file (including time)."""
-        filename = f"{name}.json"
-
-        with open(filename, "w", encoding="utf-8") as f:
-            json.dump(
-                {
-                    "date": datetime.today().strftime("%Y-%m-%d %H:%M:%S"),
-                    "points": [via.toJSON() for via in self.vias],
-                    "filters": self.filters,
-                },
-                f,
-                indent=4,
-                ensure_ascii=False,
-            )

@@ -5,7 +5,7 @@ const SearchInput = ({ onFocus, onBlur, onChange }) => {
     <input
       className="w-full text-gray-700 bg-transparent focus:outline-none"
       type="text"
-      placeholder="Search..."
+      placeholder="Chercher..."
       onFocus={onFocus}
       onBlur={onBlur}
       onChange={onChange}

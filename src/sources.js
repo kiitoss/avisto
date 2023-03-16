@@ -4,7 +4,7 @@ const SOURCES = [
   {
     id: "viaferrata",
     name: "Via-Ferrata",
-    file: "./via-ferrata.json",
+    file: "./data/via-ferrata.json",
     color: "green",
     labels: {
       starting_altitude: "altitude de départ",
@@ -13,6 +13,20 @@ const SOURCES = [
       difficulty: "difficulté",
       length: "longueur",
       price: "prix",
+      description: "description",
+    },
+  },
+  {
+    id: "cabins",
+    name: "Cabanes",
+    file: "./data/cabins.json",
+    color: "yellow",
+    labels: {
+      altitude: "altitude",
+      places: "Nombre de places",
+      water: "Présence d'eau",
+      wood: "Présence de bois",
+      toilets: "Présence de toilettes",
       description: "description",
     },
   },
