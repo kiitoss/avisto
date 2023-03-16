@@ -20,7 +20,7 @@ const Sidebar = (props) => {
         }`}
       >
         <div className="flex items-center justify-between pt-4 text-xl font-bold px-4">
-          <h2 className="mx-auto">Infos</h2>
+          <h2 className="mx-auto">Informations</h2>
           <button
             onClick={() => setIsOpen(false)}
             className="text-white hover:text-gray-300 focus:outline-none"
@@ -41,7 +41,7 @@ const Sidebar = (props) => {
                     <h4 className="text-lg font-bold">
                       {labels ? capitalize(labels[key]) : key} :
                     </h4>
-                    <Text text={value?.toString()} />
+                    <Text text={value?.toString() || "???"} />
                   </li>
                 );
               })}

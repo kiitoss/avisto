@@ -11,7 +11,7 @@ const markerIsVisible = (data, filters) => {
 
   if (!filters.is_active) return false;
 
-  for (const [key, filter] of Object.entries(filters)) {
+  for (const [key, filter] of Object.entries(filters.dataFilters)) {
     if (!filter.value) continue;
 
     if (filter.type === "range") {
@@ -24,7 +24,7 @@ const markerIsVisible = (data, filters) => {
       // TODO: add support for undefined values
       if (!data[key]) return true;
 
-      const availableValues = filter.options;
+      const availableValues = filter.value;
       const currentValues = data[key];
       const currentInAvailable = currentValues.some((value) =>
         availableValues.includes(value)

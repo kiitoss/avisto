@@ -21,6 +21,13 @@ const SOURCES = [
     name: "Cabanes",
     file: "./data/cabins.json",
     color: "yellow",
+    labels: {
+      altitude: "altitude",
+      places: "Nombre de places",
+      water: "Présence d'eau",
+      wood: "Présence de bois",
+      toilets: "Présence de toilettes",
+    },
   },
 ];
 
