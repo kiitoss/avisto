@@ -1,0 +1,66 @@
+{
+    "date": "2023-03-16 12:51:13",
+    "points": [
+        {
+            "name": "Cabane du Chemin des Statues",
+            "latitude": 47.0295833333333,
+            "longitude": 6.80994444444444,
+            "data": {
+                "altitude": 1100.0,
+                "places": null,
+                "water": true,
+                "wood": true,
+                "toilets": true
+            }
+        },
+        {
+            "name": "Chalet de la Figlia",
+            "latitude": 45.75769,
+            "longitude": 6.09016,
+            "data": {
+                "altitude": 1130.0,
+                "places": null,
+                "water": null,
+                "wood": null,
+                "toilets": null
+            }
+        },
+        {
+            "name": "Bivacco Angelo Valmaggia",
+            "latitude": 44.4390657199482,
+            "longitude": 6.95112705230713,
+            "data": {
+                "altitude": 2335.0,
+                "places": 12,
+                "water": true,
+                "wood": true,
+                "toilets": true
+            }
+        },
+        {
+            "name": "Cabane des Grands Plans",
+            "latitude": 44.809247292404,
+            "longitude": 6.44226104021072,
+            "data": {
+                "altitude": 2152.0,
+                "places": 3,
+                "water": true,
+                "wood": true,
+                "toilets": true
+            }
+        },
+        {
+            "name": "Kapelle du Ramstein",
+            "latitude": 48.2923092193965,
+            "longitude": 7.3878014087677,
+            "data": {
+                "altitude": 275.0,
+                "places": null,
+                "water": true,
+                "wood": true,
+                "toilets": true
+            }
+        }
+    ],
+    "filters": {}
+}
