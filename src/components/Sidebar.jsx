@@ -39,7 +39,7 @@ const Sidebar = (props) => {
                 return (
                   <li className="py-1" key={key}>
                     <h4 className="text-lg font-bold">
-                      {capitalize(labels[key])} :
+                      {labels ? capitalize(labels[key]) : key} :
                     </h4>
                     <Text text={value?.toString()} />
                   </li>
