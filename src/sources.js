@@ -27,6 +27,7 @@ const SOURCES = [
       water: "Présence d'eau",
       wood: "Présence de bois",
       toilets: "Présence de toilettes",
+      description: "description",
     },
   },
 ];

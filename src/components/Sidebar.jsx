@@ -34,6 +34,19 @@ const Sidebar = (props) => {
             <h3 className="text-xl text-center font-bold pb-4">
               {marker.name}
             </h3>
+            {marker.url && (
+              <p className="mb-4">
+                <span className="mr-2">&#10145;&#65039;</span>
+                <a
+                  className="underline"
+                  href={marker.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Lien vers la page officielle
+                </a>
+              </p>
+            )}
             <ul>
               {Object.entries(marker.data).map(([key, value]) => {
                 return (

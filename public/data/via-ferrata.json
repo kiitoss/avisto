@@ -1,8 +1,9 @@
 {
-    "date": "2023-03-15 18:18:18",
+    "date": "2023-03-16 14:49:23",
     "points": [
         {
             "name": "Hostiaz » La Guinguette",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-90-La-Guinguette-Hostiaz-Ain.html",
             "latitude": 45.916056,
             "longitude": 5.5186672,
             "data": {
@@ -19,6 +20,7 @@
         },
         {
             "name": "Lignerolles » La via Ferrata du haut des gorges du haut cher",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-130-La-via-Ferrata-du-haut-des-gorges-du-haut-cher-Lignerolles-Allier.html",
             "latitude": 46.2761,
             "longitude": 2.5788,
             "data": {
@@ -35,6 +37,7 @@
         },
         {
             "name": "Digne-les-Bains » Le Rocher de Neuf heures",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-152-Le-Rocher-de-Neuf-heures-Digne-les-Bains-Alpes-de-Haute-Provence.html",
             "latitude": 44.09,
             "longitude": 6.23,
             "data": {
@@ -51,6 +54,7 @@
         },
         {
             "name": "Le Caire » La Grande Fistoire",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-43-La-Grande-Fistoire-Le-Caire-Alpes-de-Haute-Provence.html",
             "latitude": 44.3765,
             "longitude": 6.071,
             "data": {
@@ -58,8 +62,8 @@
                 "arrival_altitude": 1110,
                 "drop": 300,
                 "difficulty": [
-                    "AD",
-                    "D+"
+                    "D+",
+                    "AD"
                 ],
                 "length": 930,
                 "price": "Tarif 2019 : accès 6€50 / équipement complet 15,50€ et partiel 4€",
@@ -68,6 +72,7 @@
         },
         {
             "name": "Meyronnes » L'aiguille du Coq",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-58-L%27aiguille-du-Coq-Meyronnes-Alpes-de-Haute-Provence.html",
             "latitude": 44.4833,
             "longitude": 6.8,
             "data": {
@@ -84,6 +89,7 @@
         },
         {
             "name": "Meyronnes » La Tour d'Août",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-57-La-Tour-d%27Ao%FBt-Meyronnes-Alpes-de-Haute-Provence.html",
             "latitude": 44.4833,
             "longitude": 6.8,
             "data": {
@@ -100,6 +106,7 @@
         },
         {
             "name": "Ancelle » Via ferrata de Rouanne",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-182-Via-ferrata-de-Rouanne-Ancelle-Hautes-Alpes.html",
             "latitude": 44.627795,
             "longitude": 6.262906,
             "data": {
@@ -107,9 +114,9 @@
                 "arrival_altitude": 1790,
                 "drop": 170,
                 "difficulty": [
-                    "AD",
                     "PD",
-                    "D"
+                    "D",
+                    "AD"
                 ],
                 "length": 250,
                 "price": "Gratuit",
@@ -118,6 +125,7 @@
         },
         {
             "name": "Arvieux » Les crêtes de Combe la Roche",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-125-Les-cr%EAtes-de-Combe-la-Roche-Arvieux-Hautes-Alpes.html",
             "latitude": 44.7667,
             "longitude": 6.73333,
             "data": {
@@ -132,6 +140,7 @@
         },
         {
             "name": "Briançon » La Schappe",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-146-La-Schappe-Brian%E7on-Hautes-Alpes.html",
             "latitude": 44.907,
             "longitude": 6.64329,
             "data": {
@@ -148,6 +157,7 @@
         },
         {
             "name": "Céüze » Mini via ferrata de Céüze",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-67-Mini-via-ferrata-de-C%E9%FCze-C%E9%FCze-Hautes-Alpes.html",
             "latitude": 44.5167,
             "longitude": 5.95,
             "data": {
@@ -164,6 +174,7 @@
         },
         {
             "name": "Freissinières » La Grande Falaise",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-7-La-Grande-Falaise-Freissini%E8res-Hautes-Alpes.html",
             "latitude": 44.75,
             "longitude": 6.53333,
             "data": {
@@ -180,6 +191,7 @@
         },
         {
             "name": "L'Argentière-la-Bessée » Les Gorges de la Durance",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-66-Les-Gorges-de-la-Durance-L%27Argenti%E8re-la-Bess%E9e-Hautes-Alpes.html",
             "latitude": 44.80475,
             "longitude": 6.56125,
             "data": {
@@ -187,8 +199,8 @@
                 "arrival_altitude": 1140,
                 "drop": 240,
                 "difficulty": [
-                    "TD",
-                    "F"
+                    "F",
+                    "TD"
                 ],
                 "length": 1000,
                 "price": "7 € / personne (tarif 2014)",
@@ -197,6 +209,7 @@
         },
         {
             "name": "La Grave » Les Mines du Grand Clôt",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-4-Les-Mines-du-Grand-Cl%F4t-La-Grave-Hautes-Alpes.html",
             "latitude": 45.0429,
             "longitude": 6.25414,
             "data": {
@@ -213,6 +226,7 @@
         },
         {
             "name": "Les Orres » La Cascade",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-46-La-Cascade-Les-Orres-Hautes-Alpes.html",
             "latitude": 44.5167,
             "longitude": 6.55,
             "data": {
@@ -229,6 +243,7 @@
         },
         {
             "name": "Les Vigneaux » La Voie de la Balme",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-54-La-Voie-de-la-Balme-Les-Vigneaux-Hautes-Alpes.html",
             "latitude": 44.824865,
             "longitude": 6.547369,
             "data": {
@@ -245,6 +260,7 @@
         },
         {
             "name": "Orpierre » Falaise de Paturle (2022)",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-201-Falaise-de-Paturle-%282022%29-Orpierre-Hautes-Alpes.html",
             "latitude": 44.313735,
             "longitude": 5.693381,
             "data": {
@@ -259,6 +275,7 @@
         },
         {
             "name": "Plampinet » La Pointe de Charra / Via ferrata degli alpini",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-47-La-Pointe-de-Charra--Via-ferrata-degli-alpini-Plampinet-Hautes-Alpes.html",
             "latitude": 45.002968,
             "longitude": 6.661856,
             "data": {
@@ -275,6 +292,7 @@
         },
         {
             "name": "Puy-St-Vincent » Le Tournoux",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-48-Le-Tournoux-Puy-St-Vincent-Hautes-Alpes.html",
             "latitude": 44.8333,
             "longitude": 6.48333,
             "data": {
@@ -291,6 +309,7 @@
         },
         {
             "name": "Serre-Chevalier » Le Rocher Blanc",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-50-Le-Rocher-Blanc-Serre-Chevalier-Hautes-Alpes.html",
             "latitude": 44.9333,
             "longitude": 6.58333,
             "data": {
@@ -308,6 +327,7 @@
         },
         {
             "name": "Serre-Chevalier » Le Rocher du Bez",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-51-Le-Rocher-du-Bez-Serre-Chevalier-Hautes-Alpes.html",
             "latitude": 44.948386,
             "longitude": 6.5460337,
             "data": {
@@ -324,6 +344,7 @@
         },
         {
             "name": "St-Etienne-en-Devoluy » Vertigo",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-73-Vertigo-St-Etienne-en-Devoluy-Hautes-Alpes.html",
             "latitude": 44.7,
             "longitude": 5.93333,
             "data": {
@@ -340,6 +361,7 @@
         },
         {
             "name": "Villar d'Arène » La via ferrata d'Arsine",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-97-La-via-ferrata-d%27Arsine-Villar-d%27Ar%E8ne-Hautes-Alpes.html",
             "latitude": 45.0376,
             "longitude": 6.34735,
             "data": {
@@ -356,6 +378,7 @@
         },
         {
             "name": "Auron » La Traditionnelle",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-40-La-Traditionnelle-Auron-Alpes-Maritimes.html",
             "latitude": 44.227096,
             "longitude": 6.931358,
             "data": {
@@ -363,8 +386,8 @@
                 "arrival_altitude": 2274,
                 "drop": 194,
                 "difficulty": [
-                    "TD",
-                    "D"
+                    "D",
+                    "TD"
                 ],
                 "length": 1800,
                 "price": "3 € / personne",
@@ -373,6 +396,7 @@
         },
         {
             "name": "La Colmiane » Les Baus de la Frema",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-42-Les-Baus-de-la-Frema-La-Colmiane-Alpes-Maritimes.html",
             "latitude": 44.0772,
             "longitude": 7.21725,
             "data": {
@@ -389,6 +413,7 @@
         },
         {
             "name": "Peille » L'Escale",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-39-L%27Escale-Peille-Alpes-Maritimes.html",
             "latitude": 43.8,
             "longitude": 7.4,
             "data": {
@@ -396,8 +421,8 @@
                 "arrival_altitude": 700,
                 "drop": 185,
                 "difficulty": [
-                    "TD",
-                    "D"
+                    "D",
+                    "TD"
                 ],
                 "length": 800,
                 "price": "3 € / personne",
@@ -406,6 +431,7 @@
         },
         {
             "name": "Roubion » Balma Negra",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-138-Balma-Negra-Roubion-Alpes-Maritimes.html",
             "latitude": 44.0925,
             "longitude": 7.0553,
             "data": {
@@ -413,8 +439,8 @@
                 "arrival_altitude": 180,
                 "drop": null,
                 "difficulty": [
-                    "AD",
-                    "F"
+                    "F",
+                    "AD"
                 ],
                 "length": 300,
                 "price": "2009 : 3 € (Adulte), 2 € (Enfant)",
@@ -423,6 +449,7 @@
         },
         {
             "name": "Thueyts » La via ferrata du Pont du Diable",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-127-La-via-ferrata-du-Pont-du-Diable-Thueyts-Ard%E8che.html",
             "latitude": 44.67217,
             "longitude": 4.21993,
             "data": {
@@ -439,6 +466,7 @@
         },
         {
             "name": "Castillon-en-Couserans » La via ferrata des Estagnous",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-89-La-via-ferrata-des-Estagnous-Castillon-en-Couserans-Ari%E8ge.html",
             "latitude": 42.9333,
             "longitude": 1.03333,
             "data": {
@@ -455,6 +483,7 @@
         },
         {
             "name": "Bor et Bar » Roc del Gorb",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-175-Roc-del-Gorb-Bor-et-Bar-Aveyron.html",
             "latitude": 44.18435,
             "longitude": 2.06922,
             "data": {
@@ -472,6 +501,7 @@
         },
         {
             "name": "Millau » La via ferrata du Boffi",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-92-La-via-ferrata-du-Boffi-Millau-Aveyron.html",
             "latitude": 44.1258,
             "longitude": 3.1529,
             "data": {
@@ -479,8 +509,8 @@
                 "arrival_altitude": 445,
                 "drop": 80,
                 "difficulty": [
-                    "AD",
-                    "D"
+                    "D",
+                    "AD"
                 ],
                 "length": 800,
                 "price": "Gratuit",
@@ -489,6 +519,7 @@
         },
         {
             "name": "Ste Geneviève sur Argence » La via ferrata du bois des Baltuergues",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-86-La-via-ferrata-du-bois-des-Baltuergues-Ste-Genevi%E8ve-sur-Argence-Aveyron.html",
             "latitude": 44.8,
             "longitude": 2.75,
             "data": {
@@ -496,8 +527,8 @@
                 "arrival_altitude": 625,
                 "drop": 0,
                 "difficulty": [
-                    "AD",
-                    "D"
+                    "D",
+                    "AD"
                 ],
                 "length": 800,
                 "price": "Gratuit",
@@ -506,6 +537,7 @@
         },
         {
             "name": "Clécy » Les rochers de la Cambronnerie",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-180-Les-rochers-de-la-Cambronnerie-Cl%E9cy-Calvados.html",
             "latitude": 48.916776,
             "longitude": -0.481707,
             "data": {
@@ -522,6 +554,7 @@
         },
         {
             "name": "Lascelle » La via ferrata du Lac des Graves",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-118-La-via-ferrata-du-Lac-des-Graves-Lascelle-Cantal.html",
             "latitude": 45.0167,
             "longitude": 2.58333,
             "data": {
@@ -539,6 +572,7 @@
         },
         {
             "name": "Allassac » Le Saillant (2022)",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-203-Le-Saillant-%282022%29-Allassac-Corr%E8ze.html",
             "latitude": 45.284895,
             "longitude": 1.4736302,
             "data": {
@@ -553,6 +587,7 @@
         },
         {
             "name": "Chisa » La via ferrata de Chisa",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-82-La-via-ferrata-de-Chisa-Chisa-Corse.html",
             "latitude": 41.9167,
             "longitude": 9.26667,
             "data": {
@@ -570,6 +605,7 @@
         },
         {
             "name": "Péri » La via ferrata de Péri",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-148-La-via-ferrata-de-P%E9ri-P%E9ri-Corse.html",
             "latitude": 42.005428,
             "longitude": 8.924503,
             "data": {
@@ -587,6 +623,7 @@
         },
         {
             "name": "Tolla » La via ferrata de Tolla",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-136-La-via-ferrata-de-Tolla-Tolla-Corse.html",
             "latitude": 41.9635,
             "longitude": 8.9596,
             "data": {
@@ -603,6 +640,7 @@
         },
         {
             "name": "Charquemont » La via ferrata des Echelles de la mort",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-149-La-via-ferrata-des-Echelles-de-la-mort-Charquemont-Doubs.html",
             "latitude": 47.187082,
             "longitude": 6.8728374,
             "data": {
@@ -610,8 +648,8 @@
                 "arrival_altitude": 700,
                 "drop": 100,
                 "difficulty": [
-                    "AD",
-                    "D"
+                    "D",
+                    "AD"
                 ],
                 "length": 500,
                 "price": "Gratuit",
@@ -620,6 +658,7 @@
         },
         {
             "name": "Nans-sous-Sainte-Anne » Les Baumes du Verneau",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-96-Les-Baumes-du-Verneau-Nans-sous-Sainte-Anne-Doubs.html",
             "latitude": 46.97971,
             "longitude": 6.004101,
             "data": {
@@ -627,10 +666,10 @@
                 "arrival_altitude": 750,
                 "drop": 200,
                 "difficulty": [
-                    "AD",
-                    "ED",
+                    "F",
                     "D",
-                    "F"
+                    "AD",
+                    "ED"
                 ],
                 "length": 800,
                 "price": "Gratuit (depuis 2020) - Location possible de matériel sur place",
@@ -639,6 +678,7 @@
         },
         {
             "name": "Buis-les-Baronnies » Rocher du Saint-Julien",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-159-Rocher-du-Saint-Julien-Buis-les-Baronnies-Dr%F4me.html",
             "latitude": 44.26622,
             "longitude": 5.2780728,
             "data": {
@@ -646,8 +686,8 @@
                 "arrival_altitude": 763,
                 "drop": 288,
                 "difficulty": [
-                    "D+",
                     "PD",
+                    "D+",
                     "D",
                     "ED"
                 ],
@@ -658,6 +698,7 @@
         },
         {
             "name": "Col du Rousset » Chironne",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-116-Chironne-Col-du-Rousset-Dr%F4me.html",
             "latitude": 44.838204,
             "longitude": 5.3962773,
             "data": {
@@ -665,8 +706,8 @@
                 "arrival_altitude": 1415,
                 "drop": 220,
                 "difficulty": [
-                    "TD",
-                    "D"
+                    "D",
+                    "TD"
                 ],
                 "length": 500,
                 "price": "Gratuit",
@@ -675,6 +716,7 @@
         },
         {
             "name": "Lus la Croix-Haute » La Berche",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-115-La-Berche-Lus-la-Croix-Haute-Dr%F4me.html",
             "latitude": 44.67379,
             "longitude": 5.75243,
             "data": {
@@ -682,8 +724,8 @@
                 "arrival_altitude": 1440,
                 "drop": 310,
                 "difficulty": [
-                    "AD",
-                    "D"
+                    "D",
+                    "AD"
                 ],
                 "length": 650,
                 "price": "Gratuit",
@@ -692,6 +734,7 @@
         },
         {
             "name": "Collias » Les gorges du Gardon",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-122-Les-gorges-du-Gardon-Collias-Gard.html",
             "latitude": 43.9504,
             "longitude": 4.47281,
             "data": {
@@ -708,6 +751,7 @@
         },
         {
             "name": "Boisseron » Carrières de Boisseron",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-200-Carri%E8res-de-Boisseron-Boisseron-H%E9rault.html",
             "latitude": 43.754783,
             "longitude": 4.081241,
             "data": {
@@ -722,6 +766,7 @@
         },
         {
             "name": "St-Bauzille-de-Putois » La via ferrata du Thaurac",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-101-La-via-ferrata-du-Thaurac-St-Bauzille-de-Putois-H%E9rault.html",
             "latitude": 43.907414,
             "longitude": 3.74455,
             "data": {
@@ -738,6 +783,7 @@
         },
         {
             "name": "Chamrousse » La via ferrata des Lacs Roberts",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-81-La-via-ferrata-des-Lacs-Roberts-Chamrousse-Is%E8re.html",
             "latitude": 45.129935,
             "longitude": 5.910516,
             "data": {
@@ -754,6 +800,7 @@
         },
         {
             "name": "Corps - Barrage du Sautet » La via ferrata du Belvédère",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-150-La-via-ferrata-du-Belv%E9d%E8re-Corps---Barrage-du-Sautet-Is%E8re.html",
             "latitude": 44.8169,
             "longitude": 5.90489,
             "data": {
@@ -770,6 +817,7 @@
         },
         {
             "name": "Crolles » La Vire des Lavandières",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-84-La-Vire-des-Lavandi%E8res-Crolles-Is%E8re.html",
             "latitude": 45.30469,
             "longitude": 5.88947,
             "data": {
@@ -777,8 +825,8 @@
                 "arrival_altitude": 930,
                 "drop": 270,
                 "difficulty": [
-                    "AD",
-                    "D"
+                    "D",
+                    "AD"
                 ],
                 "length": 800,
                 "price": "Gratuit",
@@ -787,6 +835,7 @@
         },
         {
             "name": "Grenoble » Les Prises de la Bastille",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-1-Les-Prises-de-la-Bastille-Grenoble-Is%E8re.html",
             "latitude": 45.19468,
             "longitude": 5.71966,
             "data": {
@@ -794,9 +843,9 @@
                 "arrival_altitude": 440,
                 "drop": 220,
                 "difficulty": [
+                    "D",
                     "AD",
-                    "TD",
-                    "D"
+                    "TD"
                 ],
                 "length": 950,
                 "price": "Gratuit",
@@ -805,6 +854,7 @@
         },
         {
             "name": "L'Alpe d'Huez » Pierre-Ronde",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-52-Pierre-Ronde-L%27Alpe-d%27Huez-Is%E8re.html",
             "latitude": 45.0834,
             "longitude": 6.08977,
             "data": {
@@ -821,6 +871,7 @@
         },
         {
             "name": "L'Alpe du Grand Serre » La via ferrata du Grand Bec",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-142-La-via-ferrata-du-Grand-Bec-L%27Alpe-du-Grand-Serre-Is%E8re.html",
             "latitude": 45.02574,
             "longitude": 5.87542,
             "data": {
@@ -838,6 +889,7 @@
         },
         {
             "name": "Saint-Vincent-de-Mercuze » Rocher de l'envers",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-187-Rocher-de-l%27envers-Saint-Vincent-de-Mercuze-Is%E8re.html",
             "latitude": 45.386389,
             "longitude": 5.9521096,
             "data": {
@@ -854,6 +906,7 @@
         },
         {
             "name": "Vaujany » Cascade de la Fare",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-177-Cascade-de-la-Fare-Vaujany-Is%E8re.html",
             "latitude": 45.163673,
             "longitude": 6.088838,
             "data": {
@@ -861,8 +914,8 @@
                 "arrival_altitude": 1797,
                 "drop": 480,
                 "difficulty": [
-                    "AD",
                     "PD",
+                    "AD",
                     "AD+"
                 ],
                 "length": 900,
@@ -872,6 +925,7 @@
         },
         {
             "name": "Moirans-en-Montagne » Le regardoir / Lac de Vouglans",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-172-Le-regardoir--Lac-de-Vouglans-Moirans-en-Montagne-Jura.html",
             "latitude": 46.445356,
             "longitude": 5.708458,
             "data": {
@@ -879,8 +933,8 @@
                 "arrival_altitude": 600,
                 "drop": 30,
                 "difficulty": [
-                    "D",
-                    "F"
+                    "F",
+                    "D"
                 ],
                 "length": 350,
                 "price": "2€ (tarif 2019)",
@@ -889,6 +943,7 @@
         },
         {
             "name": "Chalmazel-Jensagnière » Le rocher de l'Olme",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-199-Le-rocher-de-l%27Olme-Chalmazel-Jensagni%E8re-Loire.html",
             "latitude": 45.701844,
             "longitude": 3.824046,
             "data": {
@@ -905,6 +960,7 @@
         },
         {
             "name": "Planfoy » Les Pillots",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-139-Les-Pillots-Planfoy-Loire.html",
             "latitude": 45.39514,
             "longitude": 4.448382,
             "data": {
@@ -921,6 +977,7 @@
         },
         {
             "name": "Le Pertuis » La via ferrata du Puy des Juscles",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-119-La-via-ferrata-du-Puy-des-Juscles-Le-Pertuis-Haute-Loire.html",
             "latitude": 45.109008,
             "longitude": 4.047493,
             "data": {
@@ -928,9 +985,9 @@
                 "arrival_altitude": 980,
                 "drop": 80,
                 "difficulty": [
-                    "AD",
                     "PD",
-                    "F"
+                    "F",
+                    "AD"
                 ],
                 "length": 300,
                 "price": "Gratuit",
@@ -939,6 +996,7 @@
         },
         {
             "name": "Orniac » Via ferrata du Liauzu (2022)",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-202-Via-ferrata-du-Liauzu-%282022%29-Orniac-Lot.html",
             "latitude": 44.52058,
             "longitude": 1.67892,
             "data": {
@@ -953,6 +1011,7 @@
         },
         {
             "name": "Florac » Via-ferrata du Rochefort",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-163-Via-ferrata-du-Rochefort-Florac-Loz%E8re.html",
             "latitude": 44.3164,
             "longitude": 3.5863,
             "data": {
@@ -970,6 +1029,7 @@
         },
         {
             "name": "Malzieu-Ville » Via-ferrata de Malzieu-Ville",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-165-Via-ferrata-de-Malzieu-Ville-Malzieu-Ville-Loz%E8re.html",
             "latitude": 44.8611,
             "longitude": 3.3403,
             "data": {
@@ -977,10 +1037,10 @@
                 "arrival_altitude": 920,
                 "drop": 60,
                 "difficulty": [
-                    "AD",
                     "PD",
                     "TD+",
-                    "D+"
+                    "D+",
+                    "AD"
                 ],
                 "length": null,
                 "price": "Gratuit",
@@ -989,6 +1049,7 @@
         },
         {
             "name": "Rousses » Via-ferrata du Tapoul",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-160-Via-ferrata-du-Tapoul-Rousses-Loz%E8re.html",
             "latitude": 44.201,
             "longitude": 3.5901,
             "data": {
@@ -996,9 +1057,9 @@
                 "arrival_altitude": 760,
                 "drop": 20,
                 "difficulty": [
-                    "AD",
                     "PD",
-                    "F"
+                    "F",
+                    "AD"
                 ],
                 "length": 200,
                 "price": "Gratuit",
@@ -1007,6 +1068,7 @@
         },
         {
             "name": "Mont-Dore » La via du Capucin",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-185-La-via-du-Capucin-Mont-Dore-Puy-de-D%F4me.html",
             "latitude": 45.5689,
             "longitude": 2.802218,
             "data": {
@@ -1023,6 +1085,7 @@
         },
         {
             "name": "Prabouré - Saint-Anthème » Rando-ferrata des Rochers du Ronzier",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-190-Rando-ferrata-des-Rochers-du-Ronzier-Prabour%E9---Saint-Anth%E8me-Puy-de-D%F4me.html",
             "latitude": 45.526921,
             "longitude": 3.917601,
             "data": {
@@ -1037,6 +1100,7 @@
         },
         {
             "name": "Gourette » La via ferrata de Siala",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-99-La-via-ferrata-de-Siala-Gourette-Pyr%E9n%E9es-Atlantique.html",
             "latitude": 42.9667,
             "longitude": -0.333333,
             "data": {
@@ -1044,9 +1108,9 @@
                 "arrival_altitude": 1118,
                 "drop": 120,
                 "difficulty": [
-                    "TD",
+                    "F",
                     "D",
-                    "F"
+                    "TD"
                 ],
                 "length": 250,
                 "price": "Gratuit",
@@ -1055,6 +1119,7 @@
         },
         {
             "name": "Bagnères de Bigorre » Vertige de l'Adour",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-176-Vertige-de-l%27Adour-Bagn%E8res-de-Bigorre-Hautes-Pyr%E9n%E9es.html",
             "latitude": 0.0,
             "longitude": 0.0,
             "data": {
@@ -1069,6 +1134,7 @@
         },
         {
             "name": "Gedre - Gavarnie » Chaos de Coumély",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-151-Chaos-de-Coum%E9ly-Gedre---Gavarnie-Hautes-Pyr%E9n%E9es.html",
             "latitude": 42.727,
             "longitude": -0.007,
             "data": {
@@ -1087,6 +1153,7 @@
         },
         {
             "name": "Llo » Les Escaldilles",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-34-Les-Escaldilles-Llo-Pyr%E9n%E9es-Orientales.html",
             "latitude": 42.45,
             "longitude": 2.05,
             "data": {
@@ -1094,8 +1161,8 @@
                 "arrival_altitude": 1659,
                 "drop": 259,
                 "difficulty": [
-                    "AD",
-                    "D+"
+                    "D+",
+                    "AD"
                 ],
                 "length": 800,
                 "price": "29 € (tarif 2015)Incluant location matériel",
@@ -1104,6 +1171,7 @@
         },
         {
             "name": "Saint-Paul-de-Fenouillet » La Pichona",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-154-La-Pichona-Saint-Paul-de-Fenouillet-Pyr%E9n%E9es-Orientales.html",
             "latitude": 42.812529,
             "longitude": 2.504196,
             "data": {
@@ -1120,6 +1188,7 @@
         },
         {
             "name": "Le Tanet » Via-ferrata du Tanet (projet d'ouverture été 2011 mais pas encore réalisé)",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-156-Via-ferrata-du-Tanet-%28projet-d%27ouverture-%E9t%E9-2011-mais-pas-encore-r%E9alis%E9%29-Le-Tanet-Haut-Rhin.html",
             "latitude": 48.058807,
             "longitude": 7.149353,
             "data": {
@@ -1134,6 +1203,7 @@
         },
         {
             "name": "Aiguebelette » La Tête de Cheval",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-28-La-T%EAte-de-Cheval-Aiguebelette-Savoie.html",
             "latitude": 45.56638,
             "longitude": 5.80957,
             "data": {
@@ -1150,6 +1220,7 @@
         },
         {
             "name": "Aussois - Avrieux - La Norma » La Montée au Ciel",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-64-La-Mont%E9e-au-Ciel-Aussois---Avrieux---La-Norma-Savoie.html",
             "latitude": 45.20827,
             "longitude": 6.73599,
             "data": {
@@ -1166,6 +1237,7 @@
         },
         {
             "name": "Aussois - Avrieux - La Norma » La Traversée des Anges",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-24-La-Travers%E9e-des-Anges-Aussois---Avrieux---La-Norma-Savoie.html",
             "latitude": 45.20827,
             "longitude": 6.73599,
             "data": {
@@ -1182,6 +1254,7 @@
         },
         {
             "name": "Aussois - Avrieux - La Norma » Le Chemin de la Vierge",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-69-Le-Chemin-de-la-Vierge-Aussois---Avrieux---La-Norma-Savoie.html",
             "latitude": 45.20827,
             "longitude": 6.73599,
             "data": {
@@ -1198,6 +1271,7 @@
         },
         {
             "name": "Aussois - Avrieux - La Norma » Les Diablotins",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-65-Les-Diablotins-Aussois---Avrieux---La-Norma-Savoie.html",
             "latitude": 45.20827,
             "longitude": 6.73599,
             "data": {
@@ -1214,6 +1288,7 @@
         },
         {
             "name": "Beaufort » Le Roc du Vent",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-22-Le-Roc-du-Vent-Beaufort-Savoie.html",
             "latitude": 45.693032,
             "longitude": 6.67037,
             "data": {
@@ -1230,6 +1305,7 @@
         },
         {
             "name": "Bourdeau » Primevère à Oreille d'Ours",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-144-Primev%E8re-%E0-Oreille-d%27Ours-Bourdeau-Savoie.html",
             "latitude": 45.68999,
             "longitude": 5.84603,
             "data": {
@@ -1246,6 +1322,7 @@
         },
         {
             "name": "Champagny-en-Vanoise » La via ferrata des grosses pierres",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-114-La-via-ferrata-des-grosses-pierres-Champagny-en-Vanoise-Savoie.html",
             "latitude": 45.45611,
             "longitude": 6.70179,
             "data": {
@@ -1262,6 +1339,7 @@
         },
         {
             "name": "Courchevel » La Croix des Verdons",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-17-La-Croix-des-Verdons-Courchevel-Savoie.html",
             "latitude": 45.384772,
             "longitude": 6.609188,
             "data": {
@@ -1278,6 +1356,7 @@
         },
         {
             "name": "Courchevel » Le Panoramic",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-186-Le-Panoramic-Courchevel-Savoie.html",
             "latitude": 45.383349,
             "longitude": 6.610283,
             "data": {
@@ -1294,6 +1373,7 @@
         },
         {
             "name": "Lanslevillard » Col de la Madeleine",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-161-Col-de-la-Madeleine-Lanslevillard-Savoie.html",
             "latitude": 45.300806,
             "longitude": 6.9386779,
             "data": {
@@ -1310,6 +1390,7 @@
         },
         {
             "name": "Les Aillons » L'école de Rossane",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-23-L%27%E9cole-de-Rossane-Les-Aillons-Savoie.html",
             "latitude": 45.6136,
             "longitude": 6.0947,
             "data": {
@@ -1317,9 +1398,9 @@
                 "arrival_altitude": 1100,
                 "drop": 50,
                 "difficulty": [
-                    "AD",
+                    "F",
                     "D",
-                    "F"
+                    "AD"
                 ],
                 "length": 270,
                 "price": "Gratuit",
@@ -1328,6 +1409,7 @@
         },
         {
             "name": "Pontamafrey-Montpascal » La Passerelle",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-31-La-Passerelle-Pontamafrey-Montpascal-Savoie.html",
             "latitude": 45.314394,
             "longitude": 6.341114,
             "data": {
@@ -1344,6 +1426,7 @@
         },
         {
             "name": "Pralognan-la-Vanoise » La Cascade de la Fraîche",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-20-La-Cascade-de-la-Fra%EEche-Pralognan-la-Vanoise-Savoie.html",
             "latitude": 45.37846,
             "longitude": 6.72782,
             "data": {
@@ -1360,6 +1443,7 @@
         },
         {
             "name": "St-Jean-d'Arvey » La p'tchi",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-193-La-p%27tchi-St-Jean-d%27Arvey-Savoie.html",
             "latitude": 45.598968,
             "longitude": 5.975121,
             "data": {
@@ -1376,6 +1460,7 @@
         },
         {
             "name": "St-Julien-Mont-Denis » Bonnant",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-30-Bonnant-St-Julien-Mont-Denis-Savoie.html",
             "latitude": 45.2833,
             "longitude": 6.4,
             "data": {
@@ -1392,6 +1477,7 @@
         },
         {
             "name": "St-Martin d'Arc » Le Télégraphe",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-29-Le-T%E9l%E9graphe-St-Martin-d%27Arc-Savoie.html",
             "latitude": 45.217348,
             "longitude": 6.457907,
             "data": {
@@ -1408,6 +1494,7 @@
         },
         {
             "name": "St-Martin de Belleville » La via ferrata du Levassaix",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-94-La-via-ferrata-du-Levassaix-St-Martin-de-Belleville-Savoie.html",
             "latitude": 45.339387,
             "longitude": 6.531533,
             "data": {
@@ -1424,6 +1511,7 @@
         },
         {
             "name": "St-Sorlin d'Arves » La via ferrata de Comborcière",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-100-La-via-ferrata-de-Comborci%E8re-St-Sorlin-d%27Arves-Savoie.html",
             "latitude": 45.2206,
             "longitude": 6.21209,
             "data": {
@@ -1431,8 +1519,8 @@
                 "arrival_altitude": 1940,
                 "drop": 70,
                 "difficulty": [
-                    "AD",
-                    "D"
+                    "D",
+                    "AD"
                 ],
                 "length": 260,
                 "price": "Gratuit",
@@ -1441,6 +1529,7 @@
         },
         {
             "name": "Ugine » Le Pas de l'Ours",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-61-Le-Pas-de-l%27Ours-Ugine-Savoie.html",
             "latitude": 45.7973,
             "longitude": 6.4343,
             "data": {
@@ -1457,6 +1546,7 @@
         },
         {
             "name": "Val d'Isère » Les Plates de la Daille",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-18-Les-Plates-de-la-Daille-Val-d%27Is%E8re-Savoie.html",
             "latitude": 45.46269,
             "longitude": 6.96276,
             "data": {
@@ -1473,6 +1563,7 @@
         },
         {
             "name": "Valloire » Le Rocher Saint-Pierre",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-26-Le-Rocher-Saint-Pierre-Valloire-Savoie.html",
             "latitude": 45.16368,
             "longitude": 6.42306,
             "data": {
@@ -1490,6 +1581,7 @@
         },
         {
             "name": "Avoriaz » Le Saix du Tour",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-12-Le-Saix-du-Tour-Avoriaz-Haute-Savoie.html",
             "latitude": 46.1833,
             "longitude": 6.71667,
             "data": {
@@ -1506,6 +1598,7 @@
         },
         {
             "name": "Chamonix » Via ferrata des Evettes",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-191-Via-ferrata-des-Evettes-Chamonix-Haute-Savoie.html",
             "latitude": 45.959857,
             "longitude": 6.8768663,
             "data": {
@@ -1522,6 +1615,7 @@
         },
         {
             "name": "Faverges-Seythenex » La Cordée des Dahuts",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-195-La-Cord%E9e-des-Dahuts-Faverges-Seythenex-Haute-Savoie.html",
             "latitude": 45.698449,
             "longitude": 6.272746,
             "data": {
@@ -1538,6 +1632,7 @@
         },
         {
             "name": "La Chapelle d'Abondance » La via ferrata des Saix de Miolène",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-95-La-via-ferrata-des-Saix-de-Miol%E8ne-La-Chapelle-d%27Abondance-Haute-Savoie.html",
             "latitude": 46.300457,
             "longitude": 6.788521,
             "data": {
@@ -1555,6 +1650,7 @@
         },
         {
             "name": "Le Grand-Bornand » La Tour du Jallouvre",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-14-La-Tour-du-Jallouvre-Le-Grand-Bornand-Haute-Savoie.html",
             "latitude": 45.982897,
             "longitude": 6.465187,
             "data": {
@@ -1571,6 +1667,7 @@
         },
         {
             "name": "Saint-Gervais Mont-Blanc » Via ferrata du Parc Thermal",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-196-Via-ferrata-du-Parc-Thermal-Saint-Gervais-Mont-Blanc-Haute-Savoie.html",
             "latitude": 45.896814,
             "longitude": 6.705747,
             "data": {
@@ -1588,6 +1685,7 @@
         },
         {
             "name": "Saint-Jean-d'Aulps » La Tête de l'éléphant",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-167-La-T%EAte-de-l%92%E9l%E9phant-Saint-Jean-d%27Aulps-Haute-Savoie.html",
             "latitude": 46.234585,
             "longitude": 6.655675,
             "data": {
@@ -1604,6 +1702,7 @@
         },
         {
             "name": "Sixt-Fer-à-Cheval » La via ferrata du Mont",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-71-La-via-ferrata-du-Mont-Sixt-Fer-%E0-Cheval-Haute-Savoie.html",
             "latitude": 46.05662,
             "longitude": 6.75874,
             "data": {
@@ -1611,8 +1710,8 @@
                 "arrival_altitude": 900,
                 "drop": 135,
                 "difficulty": [
-                    "AD",
-                    "D"
+                    "D",
+                    "AD"
                 ],
                 "length": 800,
                 "price": "Gratuit",
@@ -1621,6 +1720,7 @@
         },
         {
             "name": "Durfort-Village » Via ferrata de Malamort - Gorges de Sor",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-194-Via-ferrata-de-Malamort---Gorges-de-Sor-Durfort-Village-Tarn.html",
             "latitude": 43.422939,
             "longitude": 2.084109,
             "data": {
@@ -1635,6 +1735,7 @@
         },
         {
             "name": "Saint-Antonin Noble Val » Le Roc d'Anglars",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-198-Le-Roc-d%27Anglars-Saint-Antonin-Noble-Val-Tarn-et-Garonne.html",
             "latitude": 44.144052,
             "longitude": 1.767934,
             "data": {
@@ -1649,6 +1750,7 @@
         },
         {
             "name": "Cavaillon » Colline Saint-Jacques",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-173-Colline-Saint-Jacques-Cavaillon-Vaucluse.html",
             "latitude": 43.8383,
             "longitude": 5.0333,
             "data": {
@@ -1656,8 +1758,8 @@
                 "arrival_altitude": null,
                 "drop": null,
                 "difficulty": [
-                    "TD",
-                    "D"
+                    "D",
+                    "TD"
                 ],
                 "length": null,
                 "price": "Gratuit",
@@ -1666,6 +1768,7 @@
         },
         {
             "name": "Bussang » Rando-ferrata de la Source de la Moselle",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-133-Rando-ferrata-de-la-Source-de-la-Moselle-Bussang-Vosges.html",
             "latitude": 47.88895,
             "longitude": 6.881117,
             "data": {
@@ -1673,8 +1776,8 @@
                 "arrival_altitude": 960,
                 "drop": 300,
                 "difficulty": [
-                    "AD",
-                    "PD"
+                    "PD",
+                    "AD"
                 ],
                 "length": 850,
                 "price": "Gratuit",
@@ -1683,6 +1786,7 @@
         },
         {
             "name": "Léaz » La via ferrata du Fort l'Ecluse",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-129-La-via-ferrata-du-Fort-l%27Ecluse-L%E9az-Ain.html",
             "latitude": 46.09709,
             "longitude": 5.886129,
             "data": {
@@ -1699,6 +1803,7 @@
         },
         {
             "name": "Le Caire » La Ferrata Familia des Ammonites",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-197-La-Ferrata-Familia-des-Ammonites-Le-Caire-Alpes-de-Haute-Provence.html",
             "latitude": 44.3765,
             "longitude": 6.071,
             "data": {
@@ -1706,8 +1811,8 @@
                 "arrival_altitude": 893,
                 "drop": 93,
                 "difficulty": [
-                    "D",
-                    "F"
+                    "F",
+                    "D"
                 ],
                 "length": 280,
                 "price": "4€ (tarif 2019)",
@@ -1716,6 +1821,7 @@
         },
         {
             "name": "Meyronnes » L'aiguille de Luce",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-55-L%27aiguille-de-Luce-Meyronnes-Alpes-de-Haute-Provence.html",
             "latitude": 44.4833,
             "longitude": 6.8,
             "data": {
@@ -1732,6 +1838,7 @@
         },
         {
             "name": "Meyronnes » L'Ourson",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-44-L%27Ourson-Meyronnes-Alpes-de-Haute-Provence.html",
             "latitude": 44.4833,
             "longitude": 6.8,
             "data": {
@@ -1748,6 +1855,7 @@
         },
         {
             "name": "Prads » Falaise de Meichira",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-174-Falaise-de-Meichira-Prads-Alpes-de-Haute-Provence.html",
             "latitude": 44.217381,
             "longitude": 6.443677,
             "data": {
@@ -1764,6 +1872,7 @@
         },
         {
             "name": "Arvieux » La via ferrata de Pra-Premier",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-105-La-via-ferrata-de-Pra-Premier-Arvieux-Hautes-Alpes.html",
             "latitude": 44.7667,
             "longitude": 6.73333,
             "data": {
@@ -1778,6 +1887,7 @@
         },
         {
             "name": "Briançon » La Croix de Toulouse",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-8-La-Croix-de-Toulouse-Brian%E7on-Hautes-Alpes.html",
             "latitude": 44.907,
             "longitude": 6.64329,
             "data": {
@@ -1794,6 +1904,7 @@
         },
         {
             "name": "Ceillac » La Clapière",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-135-La-Clapi%E8re-Ceillac-Hautes-Alpes.html",
             "latitude": 44.671779,
             "longitude": 6.763446,
             "data": {
@@ -1801,8 +1912,8 @@
                 "arrival_altitude": 1965,
                 "drop": 315,
                 "difficulty": [
-                    "AD",
-                    "D"
+                    "D",
+                    "AD"
                 ],
                 "length": null,
                 "price": "Gratuit",
@@ -1811,6 +1922,7 @@
         },
         {
             "name": "Château-Queyras » La via ferrata de Fort Queyras",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-104-La-via-ferrata-de-Fort-Queyras-Ch%E2teau-Queyras-Hautes-Alpes.html",
             "latitude": 44.75,
             "longitude": 6.78333,
             "data": {
@@ -1828,6 +1940,7 @@
         },
         {
             "name": "L'Argentière-la-Bessée » L'Horloge",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-91-L%27Horloge-L%27Argenti%E8re-la-Bess%E9e-Hautes-Alpes.html",
             "latitude": 44.7928,
             "longitude": 6.5555,
             "data": {
@@ -1844,6 +1957,7 @@
         },
         {
             "name": "La Faurie » Les Vires des Gorges d'Agnielles",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-36-Les-Vires-des-Gorges-d%27Agnielles-La-Faurie-Hautes-Alpes.html",
             "latitude": 44.55676,
             "longitude": 5.77306,
             "data": {
@@ -1860,6 +1974,7 @@
         },
         {
             "name": "Le Lauzet » L'Aiguillette du Lauzet",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-9-L%27Aiguillette-du-Lauzet-Le-Lauzet-Hautes-Alpes.html",
             "latitude": 45.0191,
             "longitude": 6.48314,
             "data": {
@@ -1876,6 +1991,7 @@
         },
         {
             "name": "Les Orres » Marcelinas",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-53-Marcelinas-Les-Orres-Hautes-Alpes.html",
             "latitude": 44.484677,
             "longitude": 6.550248,
             "data": {
@@ -1883,8 +1999,8 @@
                 "arrival_altitude": 1850,
                 "drop": 200,
                 "difficulty": [
-                    "AD",
-                    "D"
+                    "D",
+                    "AD"
                 ],
                 "length": 500,
                 "price": "Gratuit",
@@ -1893,6 +2009,7 @@
         },
         {
             "name": "Les Vigneaux » La Voie du Colombier",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-49-La-Voie-du-Colombier-Les-Vigneaux-Hautes-Alpes.html",
             "latitude": 44.824865,
             "longitude": 6.547369,
             "data": {
@@ -1909,6 +2026,7 @@
         },
         {
             "name": "Pelvoux Les Claux » Gorges d'Ailefroide",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-178-Gorges-d%92Ailefroide-Pelvoux-Les-Claux-Hautes-Alpes.html",
             "latitude": 44.8752,
             "longitude": 6.4809,
             "data": {
@@ -1926,6 +2044,7 @@
         },
         {
             "name": "Puy-St-Vincent » Le sentier de la Combe",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-98-Le-sentier-de-la-Combe-Puy-St-Vincent-Hautes-Alpes.html",
             "latitude": 44.833339,
             "longitude": 6.4796492,
             "data": {
@@ -1942,6 +2061,7 @@
         },
         {
             "name": "Serre Eyraud » Rocher d'Arthouze",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-171-Rocher-d%27Arthouze-Serre-Eyraud-Hautes-Alpes.html",
             "latitude": 44.67687,
             "longitude": 6.30161,
             "data": {
@@ -1956,6 +2076,7 @@
         },
         {
             "name": "Serre-Chevalier » Le Rocher de l'Yret (ou des Neyzets)",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-75-Le-Rocher-de-l%27Yret-%28ou-des-Neyzets%29-Serre-Chevalier-Hautes-Alpes.html",
             "latitude": 44.9333,
             "longitude": 6.58333,
             "data": {
@@ -1972,6 +2093,7 @@
         },
         {
             "name": "St-Etienne-en-Devoluy » La traversée des Beaumes",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-45-La-travers%E9e-des-Beaumes-St-Etienne-en-Devoluy-Hautes-Alpes.html",
             "latitude": 44.700192,
             "longitude": 5.930414,
             "data": {
@@ -1988,6 +2110,7 @@
         },
         {
             "name": "St-Etienne-en-Devoluy » Via Souterrata de la Tune",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-192-Via-Souterrata-de-la-Tune-St-Etienne-en-Devoluy-Hautes-Alpes.html",
             "latitude": 44.667006,
             "longitude": 5.9306863,
             "data": {
@@ -2004,6 +2127,7 @@
         },
         {
             "name": "La Brigue » La Ciappea",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-38-La-Ciappea-La-Brigue-Alpes-Maritimes.html",
             "latitude": 44.0667,
             "longitude": 7.61667,
             "data": {
@@ -2020,6 +2144,7 @@
         },
         {
             "name": "Lantosque » Les Canyons de Lantosque",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-111-Les-Canyons-de-Lantosque-Lantosque-Alpes-Maritimes.html",
             "latitude": 43.9667,
             "longitude": 7.31667,
             "data": {
@@ -2027,9 +2152,9 @@
                 "arrival_altitude": 500,
                 "drop": 0,
                 "difficulty": [
-                    "AD",
+                    "F",
                     "D",
-                    "F"
+                    "AD"
                 ],
                 "length": 950,
                 "price": "7€ / personne (tarif 2015)",
@@ -2038,6 +2163,7 @@
         },
         {
             "name": "Puget-Théniers » Les Demoiselles du Castagnet",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-79-Les-Demoiselles-du-Castagnet-Puget-Th%E9niers-Alpes-Maritimes.html",
             "latitude": 43.955746,
             "longitude": 6.869308,
             "data": {
@@ -2054,6 +2180,7 @@
         },
         {
             "name": "Tende » Les Comtes Lascaris",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-41-Les-Comtes-Lascaris-Tende-Alpes-Maritimes.html",
             "latitude": 44.087187,
             "longitude": 7.589649,
             "data": {
@@ -2061,8 +2188,8 @@
                 "arrival_altitude": 1150,
                 "drop": 330,
                 "difficulty": [
-                    "TD",
-                    "D"
+                    "D",
+                    "TD"
                 ],
                 "length": 1000,
                 "price": "3.5 € / personne (2007)",
@@ -2071,6 +2198,7 @@
         },
         {
             "name": "Val-de-Sos » Les via Ferrata du Vicdessos",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-143-Les-via-Ferrata-du-Vicdessos-Val-de-Sos-Ari%E8ge.html",
             "latitude": 42.762829,
             "longitude": 1.496131,
             "data": {
@@ -2078,10 +2206,10 @@
                 "arrival_altitude": 715,
                 "drop": null,
                 "difficulty": [
-                    "AD",
                     "PD",
+                    "F",
                     "D",
-                    "F"
+                    "AD"
                 ],
                 "length": 1330,
                 "price": "22 € / adulte (tarif 2019 matériel compris) Prix réduits pour les mineurs",
@@ -2090,6 +2218,7 @@
         },
         {
             "name": "Liaucous » La via ferrata de Liaucous",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-147-La-via-ferrata-de-Liaucous-Liaucous-Aveyron.html",
             "latitude": 44.2034,
             "longitude": 3.1944,
             "data": {
@@ -2097,8 +2226,8 @@
                 "arrival_altitude": 730,
                 "drop": 230,
                 "difficulty": [
-                    "ED",
-                    "PD"
+                    "PD",
+                    "ED"
                 ],
                 "length": 1000,
                 "price": "Gratuit",
@@ -2107,6 +2236,7 @@
         },
         {
             "name": "Montpellier le Vieux » Chaos de Montpellier-le-Vieux",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-158-Chaos-de-Montpellier-le-Vieux-Montpellier-le-Vieux-Aveyron.html",
             "latitude": 44.140483,
             "longitude": 3.202594,
             "data": {
@@ -2114,8 +2244,8 @@
                 "arrival_altitude": 850,
                 "drop": 150,
                 "difficulty": [
-                    "TD-",
-                    "PD"
+                    "PD",
+                    "TD-"
                 ],
                 "length": 1000,
                 "price": "2017 : 39€ (entrée, location, encadrement)",
@@ -2124,6 +2254,7 @@
         },
         {
             "name": "Saint-Martial Entraygues » Via-ferrata Dordogne",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-184-Via-ferrata-Dordogne-Saint-Martial-Entraygues-Corr%E8ze.html",
             "latitude": 45.117778,
             "longitude": 1.981667,
             "data": {
@@ -2131,8 +2262,8 @@
                 "arrival_altitude": null,
                 "drop": null,
                 "difficulty": [
-                    "D",
-                    "F"
+                    "F",
+                    "D"
                 ],
                 "length": 400,
                 "price": "Gratuit",
@@ -2141,6 +2272,7 @@
         },
         {
             "name": "Moltifao » La via ferrata Dia Manicella",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-37-La-via-ferrata-Dia-Manicella-Moltifao-Corse.html",
             "latitude": 42.4667,
             "longitude": 9.11667,
             "data": {
@@ -2157,6 +2289,7 @@
         },
         {
             "name": "Solenzara » La via ferrata A Buccarona",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-109-La-via-ferrata-A-Buccarona-Solenzara-Corse.html",
             "latitude": 41.845717,
             "longitude": 9.339945,
             "data": {
@@ -2165,8 +2298,8 @@
                 "drop": 300,
                 "difficulty": [
                     "PD-",
-                    "TD",
-                    "AD"
+                    "AD",
+                    "TD"
                 ],
                 "length": null,
                 "price": "2014 : 19 € (avec matériel)",
@@ -2175,6 +2308,7 @@
         },
         {
             "name": "Consolation » Les 3 vias de Consolation",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-134-Les-3-vias-de-Consolation-Consolation-Doubs.html",
             "latitude": 47.150793,
             "longitude": 6.598535,
             "data": {
@@ -2182,9 +2316,9 @@
                 "arrival_altitude": null,
                 "drop": null,
                 "difficulty": [
-                    "TD",
+                    "F",
                     "D",
-                    "F"
+                    "TD"
                 ],
                 "length": null,
                 "price": "1,5 €",
@@ -2193,6 +2327,7 @@
         },
         {
             "name": "Ornans » La via ferrata de la Roche du Mont",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-112-La-via-ferrata-de-la-Roche-du-Mont-Ornans-Doubs.html",
             "latitude": 47.107244,
             "longitude": 6.153176,
             "data": {
@@ -2200,9 +2335,9 @@
                 "arrival_altitude": 480,
                 "drop": 20,
                 "difficulty": [
+                    "ED+",
                     "AD",
-                    "TD",
-                    "ED+"
+                    "TD"
                 ],
                 "length": 360,
                 "price": "Gratuit",
@@ -2211,6 +2346,7 @@
         },
         {
             "name": "Chalancon » Le pas de l'Echelle",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-121-Le-pas-de-l%27Echelle-Chalancon-Dr%F4me.html",
             "latitude": 44.5167,
             "longitude": 5.35,
             "data": {
@@ -2227,6 +2363,7 @@
         },
         {
             "name": "Luc-en-Diois » Le Claps",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-120-Le-Claps-Luc-en-Diois-Dr%F4me.html",
             "latitude": 44.603,
             "longitude": 5.46081,
             "data": {
@@ -2243,6 +2380,7 @@
         },
         {
             "name": "Méjannes le clap » Rocher de l'Aigle",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-137-Rocher-de-l%27Aigle-M%E9jannes-le-clap-Gard.html",
             "latitude": 44.2218,
             "longitude": 4.3506,
             "data": {
@@ -2259,6 +2397,7 @@
         },
         {
             "name": "La Tour sur Orb » Via Ferrata de Caussanel",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-204-Via-Ferrata-de-Caussanel-La-Tour-sur-Orb-H%E9rault.html",
             "latitude": 43.637786,
             "longitude": 3.171444,
             "data": {
@@ -2273,6 +2412,7 @@
         },
         {
             "name": "St-Sériès » La via ferrata du Vidourle",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-110-La-via-ferrata-du-Vidourle-St-S%E9ri%E8s-H%E9rault.html",
             "latitude": 43.7366,
             "longitude": 4.122,
             "data": {
@@ -2280,8 +2420,8 @@
                 "arrival_altitude": 60,
                 "drop": 40,
                 "difficulty": [
-                    "AD",
                     "ED",
+                    "AD",
                     "TD"
                 ],
                 "length": 150,
@@ -2291,6 +2431,7 @@
         },
         {
             "name": "Chamrousse » Via ferrata des 3 Fontaines",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-3-Via-ferrata-des-3-Fontaines-Chamrousse-Is%E8re.html",
             "latitude": 45.12285,
             "longitude": 5.90651,
             "data": {
@@ -2298,8 +2439,8 @@
                 "arrival_altitude": 2240,
                 "drop": 40,
                 "difficulty": [
-                    "AD",
-                    "PD"
+                    "PD",
+                    "AD"
                 ],
                 "length": 350,
                 "price": "Gratuit",
@@ -2308,6 +2449,7 @@
         },
         {
             "name": "Corps - Barrage du Sautet » Les Tunnels & Le Grand Frisson",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-83-Les-Tunnels-%26-Le-Grand-Frisson-Corps---Barrage-du-Sautet-Is%E8re.html",
             "latitude": 44.8169,
             "longitude": 5.90489,
             "data": {
@@ -2315,8 +2457,8 @@
                 "arrival_altitude": 960,
                 "drop": 160,
                 "difficulty": [
-                    "AD",
-                    "PD"
+                    "PD",
+                    "AD"
                 ],
                 "length": 2700,
                 "price": "Gratuit",
@@ -2325,6 +2467,7 @@
         },
         {
             "name": "Crolles » Le Grand Dièdre",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-80-Le-Grand-Di%E8dre-Crolles-Is%E8re.html",
             "latitude": 45.30469,
             "longitude": 5.88947,
             "data": {
@@ -2332,8 +2475,8 @@
                 "arrival_altitude": 930,
                 "drop": 270,
                 "difficulty": [
-                    "TD",
-                    "ED-"
+                    "ED-",
+                    "TD"
                 ],
                 "length": 600,
                 "price": "Gratuit",
@@ -2342,6 +2485,7 @@
         },
         {
             "name": "L'Alpe d'Huez » Les Gorges de Sarenne",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-2-Les-Gorges-de-Sarenne-L%27Alpe-d%27Huez-Is%E8re.html",
             "latitude": 45.0834,
             "longitude": 6.08977,
             "data": {
@@ -2358,6 +2502,7 @@
         },
         {
             "name": "L'Alpe du Grand Serre » La via ferrata de la Cascade",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-102-La-via-ferrata-de-la-Cascade-L%27Alpe-du-Grand-Serre-Is%E8re.html",
             "latitude": 45.0225,
             "longitude": 5.8679,
             "data": {
@@ -2374,6 +2519,7 @@
         },
         {
             "name": "Mizoën » Le voile de la mariée (cascade de la Pisse)",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-166-Le-voile-de-la-mari%E9e-%28cascade-de-la-Pisse%29-Mizo%EBn-Is%E8re.html",
             "latitude": 45.039097,
             "longitude": 6.183302,
             "data": {
@@ -2390,6 +2536,7 @@
         },
         {
             "name": "St-Christophe-en-Oisans » La via ferrata de St-Christophe-en-Oisans",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-5-La-via-ferrata-de-St-Christophe-en-Oisans-St-Christophe-en-Oisans-Is%E8re.html",
             "latitude": 44.96168,
             "longitude": 6.16576,
             "data": {
@@ -2406,6 +2553,7 @@
         },
         {
             "name": "Venosc - Les 2 Alpes » Les Perrons",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-6-Les-Perrons-Venosc---Les-2-Alpes-Is%E8re.html",
             "latitude": 44.9922,
             "longitude": 6.12222,
             "data": {
@@ -2422,6 +2570,7 @@
         },
         {
             "name": "Morez » La via ferrata de la Roche au Dade",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-126-La-via-ferrata-de-la-Roche-au-Dade-Morez-Jura.html",
             "latitude": 46.525841,
             "longitude": 6.019641,
             "data": {
@@ -2429,8 +2578,8 @@
                 "arrival_altitude": 918,
                 "drop": 216,
                 "difficulty": [
-                    "AD",
-                    "D"
+                    "D",
+                    "AD"
                 ],
                 "length": 400,
                 "price": "Gratuit",
@@ -2439,6 +2588,7 @@
         },
         {
             "name": "Planfoy » La via ferrata de Planfoy",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-35-La-via-ferrata-de-Planfoy-Planfoy-Loire.html",
             "latitude": 45.39514,
             "longitude": 4.448382,
             "data": {
@@ -2446,8 +2596,8 @@
                 "arrival_altitude": 900,
                 "drop": 100,
                 "difficulty": [
-                    "AD",
-                    "D"
+                    "D",
+                    "AD"
                 ],
                 "length": 600,
                 "price": "Gratuit",
@@ -2456,6 +2606,7 @@
         },
         {
             "name": "Saint-Jean-Lachalm » Les Rochers de la Miramande",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-153-Les-Rochers-de-la-Miramande-Saint-Jean-Lachalm-Haute-Loire.html",
             "latitude": 44.95649,
             "longitude": 3.71907,
             "data": {
@@ -2463,8 +2614,8 @@
                 "arrival_altitude": 1100,
                 "drop": 350,
                 "difficulty": [
-                    "AD",
-                    "PD"
+                    "PD",
+                    "AD"
                 ],
                 "length": 950,
                 "price": "Gratuit",
@@ -2473,6 +2624,7 @@
         },
         {
             "name": "La Canourgue » Roqueprins",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-164-Roqueprins-La-Canourgue-Loz%E8re.html",
             "latitude": 44.42313,
             "longitude": 3.20947,
             "data": {
@@ -2480,9 +2632,9 @@
                 "arrival_altitude": 890,
                 "drop": 90,
                 "difficulty": [
+                    "D+",
                     "AD",
-                    "TD",
-                    "D+"
+                    "TD"
                 ],
                 "length": null,
                 "price": "Gratuit",
@@ -2491,6 +2643,7 @@
         },
         {
             "name": "Mende » Mende Coeur de Lozère - Le Rocher de Moïse",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-157-Mende-Coeur-de-Loz%E8re---Le-Rocher-de-Mo%EFse-Mende-Loz%E8re.html",
             "latitude": 44.49657,
             "longitude": 3.4699,
             "data": {
@@ -2498,9 +2651,9 @@
                 "arrival_altitude": 940,
                 "drop": 50,
                 "difficulty": [
-                    "AD",
                     "TD+",
-                    "D"
+                    "D",
+                    "AD"
                 ],
                 "length": null,
                 "price": "Gratuit",
@@ -2509,6 +2662,7 @@
         },
         {
             "name": "Villefort » Castanet",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-162-Castanet-Villefort-Loz%E8re.html",
             "latitude": 44.448927,
             "longitude": 3.9023372,
             "data": {
@@ -2516,8 +2670,8 @@
                 "arrival_altitude": 720,
                 "drop": 120,
                 "difficulty": [
-                    "D",
-                    "F"
+                    "F",
+                    "D"
                 ],
                 "length": 1100,
                 "price": "15€ / personne / 6€ poulie seule (tarif 2018)",
@@ -2526,6 +2680,7 @@
         },
         {
             "name": "Orbeil » La via ferrata d'Orbeil",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-72-La-via-ferrata-d%27Orbeil-Orbeil-Puy-de-D%F4me.html",
             "latitude": 45.5667,
             "longitude": 3.28333,
             "data": {
@@ -2542,6 +2697,7 @@
         },
         {
             "name": "Cauterets » Les Alias",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-141-Les-Alias-Cauterets-Hautes-Pyr%E9n%E9es.html",
             "latitude": 42.9112,
             "longitude": -0.0988,
             "data": {
@@ -2559,6 +2715,7 @@
         },
         {
             "name": "Luz-St-Sauveur » Pont Napoléon",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-74-Pont-Napol%E9on-Luz-St-Sauveur-Hautes-Pyr%E9n%E9es.html",
             "latitude": 42.8667,
             "longitude": 0.0,
             "data": {
@@ -2576,6 +2733,7 @@
         },
         {
             "name": "Saint-Paul-de-Fenouillet » La Panoramique",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-155-La-Panoramique-Saint-Paul-de-Fenouillet-Pyr%E9n%E9es-Orientales.html",
             "latitude": 42.812529,
             "longitude": 2.504196,
             "data": {
@@ -2592,6 +2750,7 @@
         },
         {
             "name": "Aussois - Avrieux - La Norma » La Descente aux Enfers",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-62-La-Descente-aux-Enfers-Aussois---Avrieux---La-Norma-Savoie.html",
             "latitude": 45.20827,
             "longitude": 6.73599,
             "data": {
@@ -2608,6 +2767,7 @@
         },
         {
             "name": "Aussois - Avrieux - La Norma » La Montée au Purgatoire",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-63-La-Mont%E9e-au-Purgatoire-Aussois---Avrieux---La-Norma-Savoie.html",
             "latitude": 45.20827,
             "longitude": 6.73599,
             "data": {
@@ -2624,6 +2784,7 @@
         },
         {
             "name": "Aussois - Avrieux - La Norma » La via ferrata de l'Ecole Buissonnière",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-106-La-via-ferrata-de-l%27Ecole-Buissonni%E8re-Aussois---Avrieux---La-Norma-Savoie.html",
             "latitude": 45.20827,
             "longitude": 6.73599,
             "data": {
@@ -2640,6 +2801,7 @@
         },
         {
             "name": "Aussois - Avrieux - La Norma » Les Angelots",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-107-Les-Angelots-Aussois---Avrieux---La-Norma-Savoie.html",
             "latitude": 45.20827,
             "longitude": 6.73599,
             "data": {
@@ -2656,6 +2818,7 @@
         },
         {
             "name": "Aussois - Avrieux - La Norma » Les Rois Mages",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-132-Les-Rois-Mages-Aussois---Avrieux---La-Norma-Savoie.html",
             "latitude": 45.20827,
             "longitude": 6.73599,
             "data": {
@@ -2672,6 +2835,7 @@
         },
         {
             "name": "Bessans » La via ferrata d'Andagne",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-70-La-via-ferrata-d%27Andagne-Bessans-Savoie.html",
             "latitude": 45.343894,
             "longitude": 7.028613,
             "data": {
@@ -2688,6 +2852,7 @@
         },
         {
             "name": "Bourdeau » Rocher de Cornillon",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-145-Rocher-de-Cornillon-Bourdeau-Savoie.html",
             "latitude": 45.68999,
             "longitude": 5.84603,
             "data": {
@@ -2704,6 +2869,7 @@
         },
         {
             "name": "Champagny-en-Vanoise » Le Plan du Bouc",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-21-Le-Plan-du-Bouc-Champagny-en-Vanoise-Savoie.html",
             "latitude": 45.459094,
             "longitude": 6.721484,
             "data": {
@@ -2711,8 +2877,8 @@
                 "arrival_altitude": 1950,
                 "drop": 500,
                 "difficulty": [
-                    "AD",
-                    "PD"
+                    "PD",
+                    "AD"
                 ],
                 "length": null,
                 "price": "Gratuit",
@@ -2721,6 +2887,7 @@
         },
         {
             "name": "Courchevel » Le Lac de la Rosière",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-77-Le-Lac-de-la-Rosi%E8re-Courchevel-Savoie.html",
             "latitude": 45.40763,
             "longitude": 6.667661,
             "data": {
@@ -2737,6 +2904,7 @@
         },
         {
             "name": "La Plagne » La falaise des Bourtes",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-189-La-falaise-des-Bourtes-La-Plagne-Savoie.html",
             "latitude": 45.507731,
             "longitude": 6.706876,
             "data": {
@@ -2754,6 +2922,7 @@
         },
         {
             "name": "Lanslevillard » La via ferrata du Pichet",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-117-La-via-ferrata-du-Pichet-Lanslevillard-Savoie.html",
             "latitude": 45.292505,
             "longitude": 6.920582,
             "data": {
@@ -2761,8 +2930,8 @@
                 "arrival_altitude": null,
                 "drop": null,
                 "difficulty": [
-                    "PD+",
-                    "F+"
+                    "F+",
+                    "PD+"
                 ],
                 "length": null,
                 "price": "Gratuit",
@@ -2771,6 +2940,7 @@
         },
         {
             "name": "Peisey-Nancroix » Les Bettières",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-60-Les-Betti%E8res-Peisey-Nancroix-Savoie.html",
             "latitude": 45.5185,
             "longitude": 6.80238,
             "data": {
@@ -2778,9 +2948,9 @@
                 "arrival_altitude": 1910,
                 "drop": 354,
                 "difficulty": [
-                    "AD",
                     "PD",
-                    "D"
+                    "D",
+                    "AD"
                 ],
                 "length": 500,
                 "price": "Gratuit",
@@ -2789,6 +2959,7 @@
         },
         {
             "name": "Pontamafrey-Montpascal » Le Bastion",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-59-Le-Bastion-Pontamafrey-Montpascal-Savoie.html",
             "latitude": 45.314394,
             "longitude": 6.341114,
             "data": {
@@ -2805,6 +2976,7 @@
         },
         {
             "name": "St-Colomban-des-Villards » La Chal",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-33-La-Chal-St-Colomban-des-Villards-Savoie.html",
             "latitude": 45.27968,
             "longitude": 6.21029,
             "data": {
@@ -2821,6 +2993,7 @@
         },
         {
             "name": "St-Jean-d'Arvey » La via ferrata Jules Carret",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-32-La-via-ferrata-Jules-Carret-St-Jean-d%27Arvey-Savoie.html",
             "latitude": 45.598968,
             "longitude": 5.975121,
             "data": {
@@ -2838,6 +3011,7 @@
         },
         {
             "name": "St-Julien-Mont-Denis » La Croix des Têtes",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-56-La-Croix-des-T%EAtes-St-Julien-Mont-Denis-Savoie.html",
             "latitude": 45.2833,
             "longitude": 6.4,
             "data": {
@@ -2854,6 +3028,7 @@
         },
         {
             "name": "St-Martin de Belleville » La via ferrata du Cochet",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-93-La-via-ferrata-du-Cochet-St-Martin-de-Belleville-Savoie.html",
             "latitude": 45.380192,
             "longitude": 6.491157,
             "data": {
@@ -2870,6 +3045,7 @@
         },
         {
             "name": "St-Pierre d'Entremont » La via ferrata de Roche Veyrand",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-108-La-via-ferrata-de-Roche-Veyrand-St-Pierre-d%27Entremont-Savoie.html",
             "latitude": 45.42445,
             "longitude": 5.84858,
             "data": {
@@ -2887,6 +3063,7 @@
         },
         {
             "name": "Ugine » Le Golet de la Trouye",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-76-Le-Golet-de-la-Trouye-Ugine-Savoie.html",
             "latitude": 45.7973,
             "longitude": 6.4343,
             "data": {
@@ -2903,6 +3080,7 @@
         },
         {
             "name": "Val d'Isère » Le Roc de Tovière",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-68-Le-Roc-de-Tovi%E8re-Val-d%27Is%E8re-Savoie.html",
             "latitude": 45.46269,
             "longitude": 6.96276,
             "data": {
@@ -2911,9 +3089,9 @@
                 "drop": 405,
                 "difficulty": [
                     "PD",
-                    "TD",
+                    "ED",
                     "D",
-                    "ED"
+                    "TD"
                 ],
                 "length": 1400,
                 "price": "Gratuit",
@@ -2922,6 +3100,7 @@
         },
         {
             "name": "Valfréjus » Le Grand Vallon",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-179-Le-Grand-Vallon-Valfr%E9jus-Savoie.html",
             "latitude": 0.0,
             "longitude": 0.0,
             "data": {
@@ -2936,6 +3115,7 @@
         },
         {
             "name": "Valloire » Poingt Ravier",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-27-Poingt-Ravier-Valloire-Savoie.html",
             "latitude": 45.16368,
             "longitude": 6.42306,
             "data": {
@@ -2952,6 +3132,7 @@
         },
         {
             "name": "Bellevaux » Via ferrata de Bellevaux",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-181-Via-ferrata-de-Bellevaux-Bellevaux-Haute-Savoie.html",
             "latitude": 46.251874,
             "longitude": 6.531799,
             "data": {
@@ -2959,9 +3140,9 @@
                 "arrival_altitude": 1030,
                 "drop": 130,
                 "difficulty": [
+                    "D+",
                     "AD",
-                    "TD",
-                    "D+"
+                    "TD"
                 ],
                 "length": 960,
                 "price": "Gratuit",
@@ -2970,6 +3151,7 @@
         },
         {
             "name": "Châtel » Mini via-ferrata de Châtel",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-169-Mini-via-ferrata-de-Ch%E2tel-Ch%E2tel-Haute-Savoie.html",
             "latitude": 46.267386,
             "longitude": 6.8412,
             "data": {
@@ -2986,6 +3168,7 @@
         },
         {
             "name": "Gruffy » La via du Semnoz (ou du Maquis)",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-103-La-via-du-Semnoz-%28ou-du-Maquis%29-Gruffy-Haute-Savoie.html",
             "latitude": 45.7833,
             "longitude": 6.05,
             "data": {
@@ -3002,6 +3185,7 @@
         },
         {
             "name": "La Clusaz » Yves Pollet-Villard",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-13-Yves-Pollet-Villard-La-Clusaz-Haute-Savoie.html",
             "latitude": 45.8789,
             "longitude": 6.4515,
             "data": {
@@ -3018,6 +3202,7 @@
         },
         {
             "name": "Passy » Curalla",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-140-Curalla-Passy-Haute-Savoie.html",
             "latitude": 45.938687,
             "longitude": 6.695609,
             "data": {
@@ -3034,6 +3219,7 @@
         },
         {
             "name": "Saint-Jean-d'Aulps » L'oeil de l'éléphant",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-168-L%27oeil-de-l%27%E9l%E9phant-Saint-Jean-d%27Aulps-Haute-Savoie.html",
             "latitude": 46.234585,
             "longitude": 6.655675,
             "data": {
@@ -3050,6 +3236,7 @@
         },
         {
             "name": "Saint-Jean-d'Aulps » Mini via-ferrata de Saint-Jean-d'Aulps",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-170-Mini-via-ferrata-de-Saint-Jean-d%27Aulps-Saint-Jean-d%27Aulps-Haute-Savoie.html",
             "latitude": 46.234585,
             "longitude": 6.655675,
             "data": {
@@ -3066,6 +3253,7 @@
         },
         {
             "name": "St-Julien-en-Genevois » La via ferrata Revaclier (au Bois du Pomier)",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-85-La-via-ferrata-Revaclier-%28au-Bois-du-Pomier%29-St-Julien-en-Genevois-Haute-Savoie.html",
             "latitude": 46.07952,
             "longitude": 6.1072025,
             "data": {
@@ -3082,6 +3270,7 @@
         },
         {
             "name": "Thônes » La Roche à l'Agathe",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-10-La-Roche-%E0-l%27Agathe-Th%F4nes-Haute-Savoie.html",
             "latitude": 45.883862,
             "longitude": 6.322102,
             "data": {
@@ -3089,10 +3278,10 @@
                 "arrival_altitude": 1150,
                 "drop": 255,
                 "difficulty": [
+                    "ED",
                     "D+",
-                    "TD",
                     "D",
-                    "ED"
+                    "TD"
                 ],
                 "length": 600,
                 "price": "Gratuit",
@@ -3101,6 +3290,7 @@
         },
         {
             "name": "Mazamet » La via ferrata de Mazamet",
+            "url": "https://www.viaferrata-fr.net/via-ferrata-205-La-via-ferrata-de-Mazamet-Mazamet-Tarn.html",
             "latitude": 43.49023,
             "longitude": 2.37644,
             "data": {
