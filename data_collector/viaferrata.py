@@ -20,6 +20,7 @@ class ViaFerrata:
 
         self.latitude = float(latitude)
         self.longitude = float(longitude)
+        self.url = url
 
         # additional data
         starting_altitude = get_text(
@@ -92,6 +93,7 @@ class ViaFerrata:
     def to_json(self) -> dict:
         return {
             "name": self.name,
+            "url": self.url,
             "latitude": self.latitude,
             "longitude": self.longitude,
             "data": self.data,

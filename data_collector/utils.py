@@ -32,6 +32,10 @@ def get_soup(url: str) -> BeautifulSoup:
     return BeautifulSoup(response.text, "html.parser")
 
 
+def normalize(text: str) -> str:
+    """Return a normalized string."""
+    return ftfy.fix_text(unicodedata.normalize("NFKC", text))
+
 def get_text(
     soup: BeautifulSoup, selector: str, strip: bool = True, index: int = 0
 ) -> str:
@@ -41,7 +45,7 @@ def get_text(
         return None
 
     text = data[index].get_text(strip=strip)
-    return ftfy.fix_text(unicodedata.normalize("NFKC", text))
+    return normalize(text)
 
 
 def get_api_data(url: str, params: dict = {}) -> dict:
